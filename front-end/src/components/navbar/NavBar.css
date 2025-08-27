@@ -1,0 +1,171 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: none;
+  padding: 1rem 2rem;
+  color: rgba(255, 255, 255, 0.783);
+  position: relative; /* Added for positioning context */
+}
+
+.navbar-left {
+  position: relative; /* Added for positioning context of .page-icon */
+}
+
+.page-icon {
+  width: 250px; /* Increased size */
+  height: 250px; /* Increased size */
+  background-color: #ffffffe6; /* Placeholder color */
+  border-radius: 50%; /* Make it circular */
+  position: absolute; /* Relative to .navbar-left */
+  top: -20px; /* Move above the navbar-left's top edge */
+  left: 0; /* Align with the left edge */
+  z-index: 1001; /* Ensure it's on top of everything */
+  border: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a glow effect */
+  overflow: hidden; /* Clip contents to the circle */
+}
+
+.page-icon-img {
+  position: absolute;
+  width: 100%; /* Fit inside with padding */
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it */
+  border-radius: 50%; /* Ensure the image itself is circular */
+  object-fit: cover; /* Fill and crop as needed maintaining aspect ratio */
+}
+
+.navbar-right {
+  list-style: none;
+  margin-right: 3rem;
+  padding: 0;
+  display: flex;
+  gap: 40px; /* Space between navigation items */
+}
+
+.navbar-right li a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  position: relative;
+}
+
+.navbar-right li a:first-child::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-right li a:hover {
+  color: #ffffff; /* Highlight on hover */
+}
+
+.navbar-right li a:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
+.blog-mega-menu-placeholder {
+  position: absolute;
+  top: 100%; /* Position below the parent li */
+  left: 50%; /* Center it horizontally relative to the parent li */
+  transform: translateX(-50%); /* Adjust for centering */
+  background-color: none;
+  backdrop-filter: blur(8px); /* Apply blur effect */
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-width: 300px; /* Adjust as needed */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Ensure it appears above other content */
+  display: flex; /* Use flexbox for internal layout */
+  flex-direction: column;
+  gap: 10px;
+  color: white; /* Ensure text is visible */
+}
+
+.blog-mega-menu-placeholder p {
+  margin: 0;
+  padding: 5px 0;
+  /* border-bottom: 1px solid #3a3f47; */ /* Removed for individual item styling */
+}
+
+.blog-mega-menu-placeholder p:last-child {
+  border-bottom: none;
+}
+
+.contact-mega-menu-placeholder {
+    left: unset; /* Remove the left: 50% from the general rule */
+    right: 0;    /* Align its right edge with the parent's right edge */
+    transform: translateX(0); /* Remove the translateX(-50%) from the general rule */
+}
+
+.mega-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 10px;
+  border-bottom: 1px solid #3a3f47; /* Separator for each item */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.mega-menu-item:last-child {
+  border-bottom: none;
+}
+
+.mega-menu-item:hover {
+  background-color: #999a9c3e; /* Highlight on hover */
+  border-radius: 4px;
+}
+
+.mega-menu-icon {
+  font-size: 1.4rem; /* Adjust icon size */
+  line-height: 1;
+}
+
+.mega-menu-text h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mega-menu-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #bbb;
+}
+
+.icon-my-journey {
+  color: #f5f1eeec
+}
+
+.icon-achievements {
+  color: #f5f1eeec
+}
+
+.icon-latest-posts {
+  color: #f5f1eeec;
+}
+
+.icon-tutorials {
+  color: #f5f1eeec;
+}
+
+.icon-email-me {
+  color: #f5f1eeec;
+}
+
+.icon-schedule-call {
+  color: #f5f1eeec;
+}
+

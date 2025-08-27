@@ -1,0 +1,134 @@
+.timeline-container {
+  width: 100%;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+.career-title {
+  color: #ffffff !important;
+  margin-bottom: 2rem !important;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  font-weight: 600 !important;
+}
+
+.material-timeline {
+  color: #ffffff !important;
+}
+
+.material-timeline .MuiTimelineItem-root {
+  min-height: auto;
+}
+
+.material-timeline .MuiTimelineOppositeContent-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+  font-weight: 500;
+}
+
+.timeline-date {
+  color: #ffffff !important;
+}
+
+.material-timeline .MuiTimelineDot-root {
+  background-color: #4CAF50 !important;
+  border: 2px solid #4CAF50 !important;
+  color: white !important;
+}
+
+.material-timeline .MuiTimelineDot-root.current-dot {
+  background-color: #2196F3 !important;
+  border-color: #2196F3 !important;
+  animation: pulse 2s infinite;
+}
+
+.material-timeline .MuiTimelineConnector-root {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.material-timeline .MuiTimelineContent-root {
+  color: #ffffff !important;
+}
+
+.content-box {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.content-box:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-title {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+.timeline-location {
+  color: rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.achievement-chip {
+  margin-top: 0.5rem !important;
+  background-color: #FFD700 !important;
+  color: #000 !important;
+  font-weight: 500 !important;
+}
+
+.status-chip {
+  margin-top: 0.5rem !important;
+  background-color: #4CAF50 !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline-container {
+    padding: 1rem;
+  }
+  
+  .material-timeline {
+    padding: 0 !important;
+  }
+  
+  .content-box {
+    padding: 0.8rem;
+  }
+}

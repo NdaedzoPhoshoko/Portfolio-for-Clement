@@ -1,0 +1,16 @@
+background: #0d1117;
+text: #ffffff;
+primary: #161b22;
+secondary: #21262d;
+tertiary: #89929b;
+success: #c6cdd5;
+error: #fa7970;
+warning: #faa356;
+danger: #fa4646;
+info: #667080;
+light: #ecf2f8;
+
+Timeline elements used for building careeer summary
+npm install @mui/lab @mui/material @emotion/react @emotion/styled
+npm install @mui/icons-material
+npm install @fortawesome/free-brands-svg-icons
