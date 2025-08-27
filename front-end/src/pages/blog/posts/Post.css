@@ -1,5 +1,5 @@
-/* Cosmic Journey Styles */
-.journey-container {
+/* Post Page Styles */
+.post-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 25%, #16213e 50%, #0f3460 75%, #533483 100%);
   position: relative;
@@ -7,24 +7,24 @@
   color: #ffffff;
 }
 
-.journey-container::before {
+.post-container::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   height: 200px;
   background: linear-gradient(to bottom, #0d1117 0%, rgba(13, 17, 23, 0.8) 50%, transparent 100%);
+  z-index: 0;
   pointer-events: none;
-  z-index: 2;
 }
 
 
 
 /* Main Content */
-.journey-content {
+.post-content {
   position: relative;
-  z-index: 3;
+  z-index: 2;
   padding: 2rem;
   max-width: 1400px;
   margin: 0 auto;
@@ -37,7 +37,7 @@
   padding: 1rem 0;
 }
 
-.journey-title {
+.post-title {
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 1rem;
@@ -46,7 +46,7 @@
   transition: all 1.5s ease-out;
 }
 
-.journey-title.animate {
+.post-title.animate {
   opacity: 1;
   transform: translateY(0);
 }
@@ -57,31 +57,31 @@
   color: #ffffff;
 }
 
-.journey-subtitle {
+.post-subtitle {
   font-size: 1.3rem;
   color: rgba(255, 255, 255, 0.8);
   opacity: 0;
   transform: translateY(30px);
   transition: all 1s ease-out 0.5s;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0;
   line-height: 1.6;
 }
 
-.journey-subtitle.animate {
+.post-subtitle.animate {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* Layout */
-.journey-layout {
+.post-layout {
   display: flex;
   gap: 3rem;
   align-items: flex-start;
 }
 
 .left-container {
-  flex: 1;
+  flex: 2;
   animation: slideInLeft 1s ease-out 1s both;
 }
 
@@ -90,29 +90,81 @@
   animation: slideInRight 1s ease-out 1.2s both;
 }
 
-.timeline-wrapper {
+.content-wrapper {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem;
+  padding: 2rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.info-wrapper {
+.sidebar-wrapper {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
-.info-content h3 {
+.sidebar-content h3 {
   color: #ffffff;
   margin-bottom: 1rem;
   font-size: 1.2rem;
 }
 
-.info-content p {
+.sidebar-content p {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   line-height: 1.5;
+}
+
+/* Placeholder Content */
+.placeholder-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.cosmic-placeholder {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.orbit {
+  width: 200px;
+  height: 200px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 2rem;
+  animation: rotate 20s linear infinite;
+}
+
+.planet {
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(255, 107, 107, 0.5);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: translateX(-50%) scale(1); }
+  50% { transform: translateX(-50%) scale(1.2); }
 }
 
 @keyframes slideInLeft {
@@ -139,26 +191,26 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
-  .journey-layout {
+  .post-layout {
     flex-direction: column;
     gap: 2rem;
   }
   
-  .journey-title {
+  .post-title {
     font-size: 2rem;
   }
   
-  .journey-subtitle {
+  .post-subtitle {
     font-size: 1.1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .journey-content {
+  .post-content {
     padding: 1rem;
   }
   
-  .journey-title {
+  .post-title {
     font-size: 1.8rem;
   }
   
@@ -175,5 +227,10 @@
     width: 15px;
     height: 15px;
     top: -7.5px;
+  }
+  
+  .content-wrapper,
+  .sidebar-wrapper {
+    padding: 1rem;
   }
 }

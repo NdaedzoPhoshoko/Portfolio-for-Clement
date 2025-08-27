@@ -4,28 +4,18 @@ import './Journey.css';
 
 const Journey = () => {
   const [titleVisible, setTitleVisible] = useState(false);
-  const [starsVisible, setStarsVisible] = useState(false);
 
   useEffect(() => {
     // Trigger title animation after component mounts
     const titleTimer = setTimeout(() => setTitleVisible(true), 500);
-    const starsTimer = setTimeout(() => setStarsVisible(true), 1000);
 
     return () => {
       clearTimeout(titleTimer);
-      clearTimeout(starsTimer);
     };
   }, []);
 
   return (
     <div className="journey-container">
-      {/* Animated Background Stars */}
-      <div className={`stars-container ${starsVisible ? 'visible' : ''}`}>
-        <div className="stars"></div>
-        <div className="twinkling"></div>
-        <div className="clouds"></div>
-      </div>
-
       {/* Main Content */}
       <div className="journey-content">
         {/* Animated Title */}
@@ -49,14 +39,18 @@ const Journey = () => {
             </div>
           </div>
 
-          {/* Right Container - Empty for now */}
+          {/* Right Container - Additional Info */}
           <div className="right-container">
-            <div className="placeholder-content">
-              <div className="cosmic-placeholder">
-                <div className="orbit">
-                  <div className="planet"></div>
-                </div>
-                <p>Future content coming soon...</p>
+            <div className="info-wrapper">
+              <div className="info-content">
+                <h3>About My Journey</h3>
+                <p>I am Ndaedzo "Clement" Phoshoko, a mathematician and technologist with a strong academic foundation and a growing professional journey. From Jan 2020 to Dec 2022, I completed my <b>BSc in Mathematics and Computer Science</b> at the University of Limpopo,
+                  where I built my passion for problem-solving and technology.<br /><br />
+                  In Jan 2024 to Dec 2024, I pursued my <b>BSc Honours in Mathematics</b> at the University of Limpopo, graduating Cum Laude as the top of my class with an 76% average. Alongside my studies,
+                  I spent three years tutoring Mathematics and Computer Science, an experience that strengthened both my analytical thinking and ability to mentor others effectively. <br /><br />
+                  Currently, from Jan 2025 to Dec 2025, I am serving as an <b>IT Intern at Redmps</b>, where I am applying my technical skills in real-world projects while learning from industry practice. My journey reflects not only a love for mathematics but also a
+                  deep passion for technology and data. I enjoy working with programming languages such as Java, C++, and SQL, and developing systems that bring real solutions to challenges. As Tony Stark said, “It’s not about me, it’s not about you, it’s about legacy.”
+                  For me, that legacy is about using data and technology to innovate, inspire growth, and open opportunities for others.</p>
               </div>
             </div>
           </div>

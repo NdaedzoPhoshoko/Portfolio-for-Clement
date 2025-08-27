@@ -5,7 +5,8 @@ import {
   faLinkedinIn,
   faInstagram,
   faTwitter,
-  faYoutube
+  faYoutube,
+  faGithub
 } from "@fortawesome/free-brands-svg-icons";
 import './Footer.css';
 
@@ -22,19 +23,23 @@ const Footer = () => {
               <span className="logo-dot"></span>
             </div>
             <div className="social-media">
-              <a href="#" className="social-link">
+              {/* <a href="#" className="social-link">
                 <FontAwesomeIcon icon={faFacebookF} />
-              </a>
-              <a href="#" className="social-link">
+              </a> */}
+              {/* make it open on new tab */}
+              <a href="https://www.linkedin.com/in/phoshokondaedzo/" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
-              <a href="#" className="social-link">
+              <a href="https://github.com/NdaedzoPhoshoko" className="social-link" target="_blank" rel="noopener noreferrer">
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+              {/* <a href="#" className="social-link">
                 <FontAwesomeIcon icon={faInstagram} />
-              </a>
-              <a href="#" className="social-link">
+              </a> */}
+              {/* <a href="#" className="social-link">
                 <FontAwesomeIcon icon={faTwitter} />
-              </a>
-              <a href="#" className="social-link">
+              </a> */}
+              <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
             </div>

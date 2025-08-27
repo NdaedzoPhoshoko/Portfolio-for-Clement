@@ -2,6 +2,8 @@
   width: 100%;
   color: #ffffff;
   font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1000; /* Ensure footer stays above other content */
 }
 
 /* Top Footer Section */
