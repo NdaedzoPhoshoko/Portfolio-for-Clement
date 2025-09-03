@@ -103,6 +103,12 @@
   padding: 1.5rem;
 }
 
+.info-content {
+  border-left: 2px solid #ffffff7c;
+  padding-left: 1.2rem;
+  padding-bottom: 0rem;
+}
+
 .info-content h3 {
   color: #ffffff;
   margin-bottom: 1rem;

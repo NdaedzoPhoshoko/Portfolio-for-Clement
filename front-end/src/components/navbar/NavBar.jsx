@@ -64,7 +64,7 @@ const Navbar = () => {
                 <p>Explore my notable accomplishments, certifications, project successes, and recognition received throughout my professional journey in software development and technology innovation.</p>
               </div>
             </div>
-            <div className="mega-menu-item">
+            <div className="mega-menu-item" onClick={() => navigate('/resume')} style={{ cursor: 'pointer' }}>
               <div className="mega-menu-icon">
                 <FontAwesomeIcon icon={faFileAlt} className="icon-my-resume" /> {/* Icon for My Resume */}
               </div>
