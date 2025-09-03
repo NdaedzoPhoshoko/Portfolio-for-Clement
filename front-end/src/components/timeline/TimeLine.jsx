@@ -14,14 +14,15 @@ const TimeLine = () => {
   const timelineData = [
     {
       date: 'Jan 2020 - Dec 2022',
-      title: 'BSc in Mathematics (Computer Science)',
+      title: 'Bachelor of Science in Mathematics (Computer Science)',
       location: 'University of Limpopo',
+      achievement: 'Best Centre of Excellence Tutor',
       status: 'completed',
       icon: <School />
     },
     {
       date: 'Jan 2024 - Dec 2024',
-      title: 'BSc Honors in Mathematics',
+      title: 'Bachelor of Science Honors in Mathematics',
       location: 'University of Limpopo',
       achievement: 'Cum Laude Achievement',
       status: 'completed',
@@ -30,7 +31,7 @@ const TimeLine = () => {
     {
       date: 'Jan 2025 - Dec 2025',
       title: 'IT Internship',
-      location: 'Redmps',
+      location: 'REDM Professional Services (Pty) Ltd',
       status: 'current',
       icon: <Work />
     }

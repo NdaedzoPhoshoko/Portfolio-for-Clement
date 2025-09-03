@@ -48,7 +48,7 @@ const Journey = () => {
                   where I built my passion for problem-solving and technology.<br /><br />
                   In Jan 2024 to Dec 2024, I pursued my <b>BSc Honours in Mathematics</b> at the University of Limpopo, graduating Cum Laude as the top of my class with an 76% average. Alongside my studies,
                   I spent three years tutoring Mathematics and Computer Science, an experience that strengthened both my analytical thinking and ability to mentor others effectively. <br /><br />
-                  Currently, from Jan 2025 to Dec 2025, I am serving as an <b>IT Intern at Redmps</b>, where I am applying my technical skills in real-world projects while learning from industry practice. My journey reflects not only a love for mathematics but also a
+                  Currently, from Jan 2025 to Dec 2025, I am serving as an <b>IT Intern</b> at Redmps, where I am applying my technical skills in real-world projects while learning from industry practice. My journey reflects not only a love for mathematics but also a
                   deep passion for technology and data. I enjoy working with programming languages such as Java, C++, and SQL, and developing systems that bring real solutions to challenges. As Tony Stark said, “It’s not about me, it’s not about you, it’s about legacy.”
                   For me, that legacy is about using data and technology to innovate, inspire growth, and open opportunities for others.</p>
               </div>

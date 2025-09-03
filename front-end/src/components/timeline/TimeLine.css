@@ -1,5 +1,5 @@
 .timeline-container {
-  width: 100%;
+  width: 96.5%;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -41,7 +41,10 @@
 .material-timeline .MuiTimelineDot-root.current-dot {
   background-color: #2196F3 !important;
   border-color: #2196F3 !important;
-  animation: pulse 2s infinite;
+  animation: pulse 2s infinite; /*When i add animation the blue work icon does not aligns properly, so I added margin-left to push it towards the right */
+  display: flex !important;
+  margin-left: 32.5px !important;
+
 }
 
 .material-timeline .MuiTimelineConnector-root {
@@ -49,6 +52,11 @@
 }
 
 .material-timeline .MuiTimelineContent-root {
+  color: #ffffff !important;
+}
+
+.MuiTypography-root .MuiTypography-body2 {
+  margin-top: 16px;
   color: #ffffff !important;
 }
 
@@ -71,6 +79,7 @@
   font-weight: 600 !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
+  line-height: 1.4 !important;
 }
 
 .timeline-location {
@@ -80,16 +89,20 @@
 
 .achievement-chip {
   margin-top: 0.5rem !important;
-  background-color: #FFD700 !important;
-  color: #000 !important;
-  font-weight: 500 !important;
+  background-color: rgba(255, 255, 255, 0.734) !important;
+  color: #1d1111 !important;
+  font-weight: 600 !important;
+  border-radius: 3px !important;
+  border-left: 4px solid rgba(235, 235, 12, 0.819) !important;
 }
 
 .status-chip {
   margin-top: 0.5rem !important;
   background-color: #4CAF50 !important;
   color: white !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+  border-radius: 3px !important;
+  border-left: 4px solid rgba(255, 255, 255, 0.819) !important;
 }
 
 @keyframes pulse {
