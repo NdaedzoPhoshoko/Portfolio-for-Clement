@@ -1,0 +1,57 @@
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+}
+
+.pencil-icon {
+    width: 24px;
+    height: 24px;
+    transform: rotate(0deg);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.1s ease;
+}
+
+.drawing-svg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.current-path {
+    stroke: #502c2c;
+    stroke-width: 2;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    animation: trailFade 3s ease-out forwards;
+}
+
+@keyframes trailFade {
+    0% {
+        opacity: 1;
+        stroke-width: 2;
+    }
+    100% {
+        opacity: 0;
+        stroke-width: 0;
+    }
+}
+
+/* Hide default cursor when custom cursor is active */
+body.custom-cursor-active {
+    cursor: none;
+}
+
+/* Add some visual feedback when drawing */
+body.custom-cursor-active.drawing {
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.02) 0%, rgba(0, 0, 0, 0.02) 100%);
+}

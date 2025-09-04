@@ -1,10 +1,12 @@
 import React from 'react';
 import './Resume.css';
 import { GitHub, LinkedIn } from '@mui/icons-material';
+import CustomCursor from '../../../components/cursor/CustomCursor';
 
 const Resume = () => {
   return (
     <div className="resume-container">
+      <CustomCursor />
       <div className="resume-document">
         {/* Left Column - Light Grey Background */}
         <div className="resume-left-column">

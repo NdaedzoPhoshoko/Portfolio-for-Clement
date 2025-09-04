@@ -132,4 +132,20 @@ body::after {
   50% { opacity: 1; }
 }
 
+/* Global cursor hiding for custom cursor */
+/* * {
+  cursor: none !important;
+} */
+
+/* Exception for form inputs and buttons to show text cursor */
+/* and exception for links and buttons */
+/* input, textarea, [contenteditable] {
+  cursor: text !important;
+}
+
+
+a, button, [role="button"] {
+  cursor: pointer !important;
+} */
+
 
