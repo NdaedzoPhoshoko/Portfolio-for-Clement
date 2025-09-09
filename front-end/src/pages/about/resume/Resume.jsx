@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Resume.css';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import CustomCursor from '../../../components/cursor/CustomCursor';
 
 const Resume = () => {
+  const [visibleSections, setVisibleSections] = useState(new Set());
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisibleSections(prev => new Set([...prev, entry.target.id]));
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      }
+    );
+
+    // Observe all sections
+    const sections = document.querySelectorAll('.resume-section');
+    sections.forEach(section => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="resume-container">
       <CustomCursor />
@@ -11,12 +35,18 @@ const Resume = () => {
         {/* Left Column - Light Grey Background */}
         <div className="resume-left-column">
           {/* Profile Image */}
-          <div className="profile-image">
+          <div 
+            id="profile-section" 
+            className={`resume-section profile-image ${visibleSections.has('profile-section') ? 'animate-slide-in-left' : ''}`}
+          >
             <img src="/src/assets/images/author-profile.jpg" alt="NDAEDZO CLEMENT PHOSHOKO" />
           </div>
 
           {/* Contact Section */}
-          <div className="contact-section">
+          <div 
+            id="contact-section" 
+            className={`resume-section contact-section ${visibleSections.has('contact-section') ? 'animate-slide-in-left' : ''}`}
+          >
             <h2 className="section-heading">CONTACT</h2>
             <div className="contact-item">
               <i className="icon-phone"></i>
@@ -34,7 +64,10 @@ const Resume = () => {
           </div>
 
           {/* Core Skills Section */}
-          <div className="skills-section">
+          <div 
+            id="skills-section" 
+            className={`resume-section skills-section ${visibleSections.has('skills-section') ? 'animate-slide-in-left' : ''}`}
+          >
             <h2 className="section-heading">CORE SKILLS</h2>
             <ul className="skills-list">
               <li>Java, Python, C++, C#, JavaScript (React.js, Node.js, Express.js), SQL</li>
@@ -46,7 +79,10 @@ const Resume = () => {
           </div>
 
           {/* Qualities Section */}
-          <div className="qualities-section">
+          <div 
+            id="qualities-section" 
+            className={`resume-section qualities-section ${visibleSections.has('qualities-section') ? 'animate-slide-in-left' : ''}`}
+          >
             <h2 className="section-heading">QUALITIES</h2>
             <ul className="qualities-list">
               <li>Excellent collaboration and interpersonal communication skills</li>
@@ -58,7 +94,10 @@ const Resume = () => {
           </div>
 
           {/* Social Section */}
-          <div className="social-section">
+          <div 
+            id="social-section" 
+            className={`resume-section social-section ${visibleSections.has('social-section') ? 'animate-slide-in-left' : ''}`}
+          >
             <h2 className="section-heading">SOCIAL</h2>
             <ul className="social-list">
               <li>
@@ -91,7 +130,10 @@ const Resume = () => {
           </div> */}
 
           {/* Summary Section */}
-          <div className="summary-section">
+          <div 
+            id="summary-section" 
+            className={`resume-section summary-section ${visibleSections.has('summary-section') ? 'animate-slide-in-right' : ''}`}
+          >
             <h2 className="section-heading">SUMMARY</h2>
             <p>
               A skilled IT intern with a Cum Laude BSc Honours in Mathematics, driven by
@@ -103,7 +145,10 @@ const Resume = () => {
           </div>
 
           {/* Education Section */}
-          <div className="education-section">
+          <div 
+            id="education-section" 
+            className={`resume-section education-section ${visibleSections.has('education-section') ? 'animate-slide-in-right' : ''}`}
+          >
             <h2 className="section-heading">EDUCATION</h2>
             <div className="education-item">
               <h3>Bachelor of Science Honours in Mathematics</h3>
@@ -118,7 +163,10 @@ const Resume = () => {
           </div>
 
           {/* Career Summary Section */}
-          <div className="career-section">
+          <div 
+            id="career-section" 
+            className={`resume-section career-section ${visibleSections.has('career-section') ? 'animate-slide-in-right' : ''}`}
+          >
             <h2 className="section-heading">CAREER SUMMARY</h2>
             <div className="career-item">
               <h3>IT Intern - REDM Professional Services (PTY) LTD</h3>
@@ -142,7 +190,10 @@ const Resume = () => {
           </div>
 
           {/* References Section */}
-          <div className="references-section">
+          <div 
+            id="references-section" 
+            className={`resume-section references-section ${visibleSections.has('references-section') ? 'animate-slide-in-right' : ''}`}
+          >
             <h2 className="section-heading">REFERENCES</h2>
             <div className="reference-item">
               <p>Mabore Thusago, Coordinator at CAE BSSP (mabore.thosago@ul.ac.za)</p>
