@@ -1,7 +1,6 @@
 /* Cosmic Journey Styles */
 .journey-container {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
   position: relative;
   overflow: hidden;
   color: #ffffff;
@@ -14,7 +13,6 @@
   left: 0;
   width: 100%;
   height: 200px;
-  background: linear-gradient(to bottom, #0d1117 0%, rgba(13, 17, 23, 0.8) 50%, transparent 100%);
   pointer-events: none;
   z-index: 2;
 }
@@ -91,7 +89,7 @@
 }
 
 .timeline-wrapper {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(15px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.1);

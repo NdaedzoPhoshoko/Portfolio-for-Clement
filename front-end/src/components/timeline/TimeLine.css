@@ -1,7 +1,6 @@
 .timeline-container {
   width: 96.5%;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border-radius: 16px;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -61,7 +60,7 @@
 }
 
 .content-box {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.034);
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);

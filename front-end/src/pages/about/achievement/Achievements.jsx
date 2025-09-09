@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import './Achievements.css';
 
 const achievements = [
@@ -104,6 +104,86 @@ const certificates = [
 ];
 
 const Achievements = () => {
+  const leetcodesRef = useRef(null);
+  const [showLeftEdge, setShowLeftEdge] = useState(false);
+  const [showRightEdge, setShowRightEdge] = useState(false);
+
+  const leetcodeItems = [
+    {
+      id: 1,
+      title: 'Two Sum',
+      description: 'Find two numbers that add up to a target using hash map for O(n).',
+      languages: ['JavaScript', 'Python']
+    },
+    {
+      id: 2,
+      title: 'Valid Parentheses',
+      description: 'Use a stack to validate matching brackets in linear time.',
+      languages: ['JavaScript']
+    },
+    {
+      id: 3,
+      title: 'Merge Two Sorted Lists',
+      description: 'Iteratively merge two linked lists with O(1) extra space.',
+      languages: ['Python']
+    },
+    {
+      id: 4,
+      title: 'Best Time to Buy and Sell Stock',
+      description: 'Track min price and max profit in one pass.',
+      languages: ['TypeScript', 'Python']
+    },
+    {
+      id: 5,
+      title: 'Binary Tree Level Order Traversal',
+      description: 'Breadth-first traversal using a queue, grouping by depth.',
+      languages: ['JavaScript']
+    },
+    {
+      id: 6,
+      title: 'Product of Array Except Self',
+      description: 'Prefix and suffix products to achieve O(n) without division.',
+      languages: ['Python', 'JavaScript']
+    }
+  ];
+
+  const atLeftEdge = () => {
+    const el = leetcodesRef.current;
+    if (!el) return true;
+    return el.scrollLeft <= 0;
+  };
+
+  const atRightEdge = () => {
+    const el = leetcodesRef.current;
+    if (!el) return true;
+    return Math.ceil(el.scrollLeft + el.clientWidth) >= el.scrollWidth;
+  };
+
+  const flashEdge = (side) => {
+    if (side === 'left') {
+      setShowLeftEdge(true);
+      setTimeout(() => setShowLeftEdge(false), 700);
+    } else {
+      setShowRightEdge(true);
+      setTimeout(() => setShowRightEdge(false), 700);
+    }
+  };
+
+  const scrollByPage = (direction) => {
+    if (!leetcodesRef.current) return;
+    const container = leetcodesRef.current;
+    if (direction === 'next' && atRightEdge()) {
+      flashEdge('right');
+      return;
+    }
+    if (direction === 'prev' && atLeftEdge()) {
+      flashEdge('left');
+      return;
+    }
+    const amount = container.clientWidth * (direction === 'next' ? 1 : -1);
+    container.scrollBy({ left: amount, behavior: 'smooth' });
+  };
+
   return (
     <div className="achievements-container">
       {/* Projects Section */}
@@ -177,6 +257,36 @@ const Achievements = () => {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Leetcodes Section */}
+      <div className="section-header">
+        <h1 className="section-title">Leetcodes</h1>
+        <div className="section-underline"></div>
+      </div>
+
+      <div className="leetcodes-wrapper">
+        {showLeftEdge && <div className="leetcode-edge-shadow left" />}
+        {showRightEdge && <div className="leetcode-edge-shadow right" />}
+        <button className="leetcode-chevron leetcode-chevron-left" onClick={() => scrollByPage('prev')} aria-label="Previous">
+          ‹
+        </button>
+        <div className="leetcodes-scroller" ref={leetcodesRef}>
+          {leetcodeItems.map((item) => (
+            <div key={item.id} className="leetcode-item">
+              <h3 className="leetcode-title">{item.title}</h3>
+              <p className="leetcode-description">{item.description}</p>
+              <div className="leetcode-tags">
+                {item.languages.map((lang, idx) => (
+                  <span key={idx} className="lang-tag">{lang}</span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="leetcode-chevron leetcode-chevron-right" onClick={() => scrollByPage('next')} aria-label="Next">
+          ›
+        </button>
       </div>
     </div>
   );

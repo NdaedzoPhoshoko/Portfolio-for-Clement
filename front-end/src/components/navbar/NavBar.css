@@ -85,7 +85,7 @@
   backdrop-filter: blur(8px); /* Apply blur effect */
   border: none;
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.7rem;
   min-width: 300px; /* Adjust as needed */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
   z-index: 1000; /* Ensure it appears above other content */
