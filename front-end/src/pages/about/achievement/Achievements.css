@@ -1,0 +1,459 @@
+.achievements-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0f0f0f 100%);
+  padding: 2rem;
+  color: #ffffff;
+}
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: -0.02em;
+}
+
+.section-underline {
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b35 0%, #f7931e 100%);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.achievement-card:nth-child(1) { animation-delay: 0.1s; }
+.achievement-card:nth-child(2) { animation-delay: 0.2s; }
+.achievement-card:nth-child(3) { animation-delay: 0.3s; }
+.achievement-card:nth-child(4) { animation-delay: 0.4s; }
+.achievement-card:nth-child(5) { animation-delay: 0.5s; }
+.achievement-card:nth-child(6) { animation-delay: 0.6s; }
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.achievement-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
+}
+
+.github-icon-overlay {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.github-icon-overlay:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.github-icon {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.github-icon-overlay:hover .github-icon {
+  color: #ff6b35;
+}
+
+.achievement-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.achievement-card:hover .achievement-image {
+  transform: scale(1.05);
+  filter: brightness(0.9) contrast(1.2);
+}
+
+.achievement-content {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.achievement-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-category {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.achievement-description {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.achievement-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-tag {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.3rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tech-tag:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Certificates Section */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.certificate-item {
+  display: flex;
+  align-items: center;
+  background: none;
+  border-radius: 15px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+.certificate-item:nth-child(1) { animation-delay: 0.1s; }
+.certificate-item:nth-child(2) { animation-delay: 0.2s; }
+.certificate-item:nth-child(3) { animation-delay: 0.3s; }
+.certificate-item:nth-child(4) { animation-delay: 0.4s; }
+.certificate-item:nth-child(5) { animation-delay: 0.5s; }
+.certificate-item:nth-child(6) { animation-delay: 0.6s; }
+
+.certificate-item:hover {
+  transform: translateY(-3px);
+  position: relative;
+  overflow: hidden;
+}
+
+.certificate-item:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.3), transparent);
+  animation: electricSweep 0.8s ease-out;
+  z-index: 1;
+}
+
+.certificate-item:hover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255, 107, 53, 0.1) 50%, 
+    transparent 70%);
+  animation: electricPulse 0.6s ease-in-out;
+  z-index: 0;
+}
+
+.certificate-item:hover .cert-icon {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(255, 107, 53, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 107, 53, 0.4));
+}
+
+.certificate-item:hover .certificate-title {
+  color: #ff6b35;
+  text-shadow: 0 0 10px rgba(255, 107, 53, 0.6);
+}
+
+.certificate-item:hover .certificate-date,
+.certificate-item:hover .certificate-place {
+  color: rgba(255, 107, 53, 0.8);
+}
+
+
+.cert-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-item:hover .cert-icon {
+  transform: scale(1.1);
+}
+
+.certificate-details {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.certificate-icon {
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.certificate-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.certificate-date {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.certificate-place {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes electricSweep {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes electricPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievements-container {
+    padding: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .certificates-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .achievement-image-container {
+    height: 180px;
+  }
+  
+  .github-icon-overlay {
+    width: 35px;
+    height: 35px;
+    top: 12px;
+    right: 12px;
+  }
+  
+  .github-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .achievement-content {
+    padding: 1.2rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.2rem;
+  }
+  
+  .achievement-description {
+    font-size: 0.85rem;
+  }
+  
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .certificate-item {
+    padding: 1.2rem;
+  }
+  
+  .cert-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .certificate-title {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-container {
+    padding: 0.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .achievement-image-container {
+    height: 160px;
+  }
+  
+  .github-icon-overlay {
+    width: 32px;
+    height: 32px;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .github-icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .achievement-content {
+    padding: 1rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.1rem;
+  }
+  
+  .achievement-description {
+    font-size: 0.8rem;
+  }
+  
+  .certificate-item {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .certificate-icon {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .cert-icon {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .certificate-title {
+    font-size: 1rem;
+  }
+}

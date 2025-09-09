@@ -55,7 +55,7 @@ const Navbar = () => {
                 <p>Discover my professional evolution from early beginnings to current expertise, including key career transitions and learning experiences that shaped my path in technology and development.</p>
               </div>
             </div>
-            <div className="mega-menu-item">
+            <div className="mega-menu-item" onClick={() => navigate('/achievements')} style={{ cursor: 'pointer' }}>
               <div className="mega-menu-icon">
                 <FontAwesomeIcon icon={faTrophy} className="icon-achievements" /> {/* Icon for Achievements */}
               </div>
