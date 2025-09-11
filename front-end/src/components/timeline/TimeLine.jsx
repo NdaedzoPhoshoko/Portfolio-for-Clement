@@ -29,7 +29,7 @@ const TimeLine = () => {
       icon: <CheckCircle />
     },
     {
-      date: 'Jan 2025 - Dec 2025',
+      date: 'Jan 2025 - Sep 2025',
       title: 'Information Technology Internship',
       location: 'REDM Professional Services (Pty) Ltd',
       status: 'current',

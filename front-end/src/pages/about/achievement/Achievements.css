@@ -182,9 +182,10 @@
   align-items: center;
   background: none;
   border-radius: 15px;
-  padding: 1.5rem;
+  padding: 0rem 1rem;
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out both;
+  cursor: pointer;
 }
 
 .certificate-item:nth-child(1) { animation-delay: 0.1s; }
@@ -243,13 +244,64 @@
   color: rgba(255, 107, 53, 0.8);
 }
 
+/* Show More Button */
+.show-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.show-more-btn {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: none;
+  border-radius: 25px;
+  padding: 0.75rem 1.5rem;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.show-more-btn:hover {
+  background: rgba(255, 107, 53, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(255, 107, 53, 0.2);
+}
+
+.show-more-text {
+  font-family: 'Inter', sans-serif;
+}
+
+.show-more-chevron {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.show-more-chevron.rotated {
+  transform: rotate(180deg);
+}
+
 
 .cert-icon {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  max-height: 60px;
   object-fit: contain;
   border-radius: 8px;
   transition: transform 0.3s ease;
+}
+
+/* Move icons of first three certificate items to the left */
+.certificate-item:nth-child(1) .cert-icon,
+.certificate-item:nth-child(2) .cert-icon,
+.certificate-item:nth-child(3) .cert-icon {
+  margin-left: -30px;
+  margin-right: -26px;
 }
 
 .certificate-item:hover .cert-icon {
@@ -313,8 +365,8 @@
   color: #ffffff;
   scroll-snap-align: start;
   border-radius: 12px;
-  transition: box-shadow 0.3s ease;
-  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .leetcode-item:hover { 
@@ -347,6 +399,42 @@
   padding: 0.2rem 0.6rem;
   font-size: 0.72rem;
   border-radius: 10px;
+}
+
+/* LeetCode GitHub Icon */
+.leetcode-github-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+}
+
+.leetcode-github-icon:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.leetcode-github-icon svg {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.leetcode-github-icon:hover svg {
+  color: #ff6b35;
 }
 
 .leetcode-chevron {
@@ -510,9 +598,33 @@
     width: 50px;
     height: 50px;
   }
+
+  /* Move icons of first three certificate items to the left on tablet */
+  .certificate-item:nth-child(1) .cert-icon,
+  .certificate-item:nth-child(2) .cert-icon,
+  .certificate-item:nth-child(3) .cert-icon {
+    margin-left: -22px;
+  }
   
   .certificate-title {
     font-size: 1.1rem;
+  }
+
+  .leetcode-github-icon {
+    width: 28px;
+    height: 28px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .leetcode-github-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .show-more-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -568,8 +680,32 @@
     width: 45px;
     height: 45px;
   }
+
+  /* Move icons of first three certificate items to the left on mobile */
+  .certificate-item:nth-child(1) .cert-icon,
+  .certificate-item:nth-child(2) .cert-icon,
+  .certificate-item:nth-child(3) .cert-icon {
+    margin-left: -18px;
+  }
   
   .certificate-title {
     font-size: 1rem;
+  }
+
+  .leetcode-github-icon {
+    width: 26px;
+    height: 26px;
+    top: 8px;
+    right: 8px;
+  }
+
+  .leetcode-github-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .show-more-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
   }
 }
