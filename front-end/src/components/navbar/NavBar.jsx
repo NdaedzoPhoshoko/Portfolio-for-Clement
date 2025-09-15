@@ -86,7 +86,7 @@ const Navbar = () => {
         <Link>Blog World</Link>
         {showBlogMegaMenu && (
           <div className="blog-mega-menu-placeholder">
-            <div className="mega-menu-item" onClick={() => navigate('/post')} style={{ cursor: 'pointer' }}>
+            <div className="mega-menu-item" onClick={() => navigate('/blog')} style={{ cursor: 'pointer' }}>
               <div className="mega-menu-icon">
                 <FontAwesomeIcon icon={faPenToSquare} className="icon-latest-posts" /> {/* Icon for Latest Posts */}
               </div>
