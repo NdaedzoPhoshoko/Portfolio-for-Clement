@@ -8,7 +8,9 @@ import Journey from "./pages/about/journey/Journey";
 import Resume from "./pages/about/resume/Resume";
 import Achievements from "./pages/about/achievement/Achievements";
 
-import Post from "./pages/blog/posts/Post";
+import Blog from "./pages/blog/Blog";
+// import Item from "./pages/blog/posts/item/Item";
+import ViewItem from "./pages/blog/posts/view_item/ViewItem";
 
 // Placeholder components for routes
 const HireMe = () => <h2>Hire Me Page</h2>;
@@ -23,7 +25,8 @@ function App() {
         <Route path="/journey" element={<Journey />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/achievements" element={<Achievements />} />
-        <Route path="/post" element={<Post />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/view/:id" element={<ViewItem />} />
         <Route path="/hire" element={<HireMe />} />
         <Route path="/contact" element={<ContactMe />} />
       </Routes>
