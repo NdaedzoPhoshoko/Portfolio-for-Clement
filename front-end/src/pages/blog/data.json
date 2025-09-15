@@ -1,13 +1,30 @@
 {
   "blogPosts": [
     {
+      "id": "my-journey-into-mathematics-and-technology",
+      "title": "My Journey into Mathematics and Technology",
+      "description": "A personal story of how I grew from a small village in Limpopo to excelling in mathematics, tutoring, research, and software development.",
+      "content": "# My Journey into Mathematics and Technology\n\nI was born and raised in **Mulima**, a small village near Elim in Limpopo, where I lived with my grandmother until completing grade 12 in 2019. She was the foundation of my journey — teaching me resilience, discipline, and the belief that education is the key to opening doors. Her influence shaped not only my character but also my passion for learning.\n\n## The Start of My Academic Path\n\nIn 2020, I enrolled at the **University of Limpopo** for a **BSc in Mathematics and Computer Science**. This was the moment where abstract thinking and practical computing came together for me. I immersed myself in algorithms, programming, and pure mathematics — enjoying the balance between logic and creativity.\n\nI continued my journey with a **BSc Honours in Mathematics (2024)**, where I graduated *cum laude* with an 76% average, ranking as the top student in my class. My coursework included **General Topology, Complex Analysis, Functional Analysis, Measure Theory and Integration, Category Theory, Number Theory, and Cryptography**. I conducted research on **linear codes and group modules (G-modules)**, exploring the connection between group theory and encoding processes.\n\n## Teaching and Mentorship\n\nAlongside studying, I spent three years as a **mathematics and computer science tutor** at the University of Limpopo. Tutoring allowed me to strengthen my communication and problem-solving skills while helping others succeed. I also contributed to the **CAE Baditi Student Support Programme**, mentoring first-year students in managing academic challenges and social pressures. Teaching taught me patience and the value of guiding others.\n\n## Technology and Development Journey\n\nWhile mathematics sharpened my abstract reasoning, technology gave me a creative outlet. I developed skills across multiple areas:\n\n- **Programming Languages**: Java, C++, Python, C#, SQL (MySQL), Microsoft Assembly\n- **Web Development**: HTML5, CSS3, XML, React.js, Node.js, Express.js, Angular\n- **Frameworks & Tools**: Java Spring, Git, Sequelize ORM, Power BI\n- **Mobile Development**: Android Studio (Java)\n- **Cloud & Version Control**: Huawei Cloud, Oracle Cloud\n\nI’ve built **full-stack projects** combining React (frontend), Node.js/Express (backend), and PostgreSQL (database). I particularly enjoy solving problems where mathematics meets technology — like in cryptography, algorithms, and data-driven applications.\n\n## Recognition and Growth\n\n- Graduated *cum laude* in Honours Mathematics (2024)\n- Top student in my Honours class with an 76% average\n- Certifications: Agile & Scrum, Java, SQL\n- Active on **LinkedIn** and **GitHub**, continuously learning and sharing work\n\n## Looking Ahead\n\nMy journey is a blend of **mathematics, technology, teaching, and research**. I see myself growing into a professional who bridges theory and application — whether in data science, cryptography, or software engineering. My dream is to continue learning, innovating, and using both mathematics and technology to solve complex real-world problems.\n\nFrom the quiet beginnings in Mulima to excelling at the University of Limpopo, my path reflects persistence, curiosity, and a deep love for knowledge. I carry these values forward as I continue building my future.\n",
+      "image": "../../../src/assets/blogs/ndaedzo_at_redmps.jpg",
+      "author": {
+        "name": "Ndaedzo Clement Phoshoko",
+        "avatar": "/src/assets/images/author-profile.jpg",
+        "title": "Mathematician | Full Stack Developer | Aspiring Data Scientist"
+      },
+      "publishDate": "15 Sep 2025",
+      "readTime": "7 min read",
+      "tags": ["Mathematics", "Technology", "Research", "Software Development", "Personal Journey"],
+      "category": "Career Journey",
+      "featured": true
+    },
+    {
       "id": "react-development-guide",
       "title": "Building Modern React Applications: A Developer's Journey",
       "description": "Explore the journey of building modern React applications, from foundational concepts to advanced techniques. Learn about best practices, performance optimization, and the latest features.",
       "content": "# Building Modern React Applications: A Developer's Journey\n\nReact has revolutionized the way we build user interfaces, and as a developer who has been working with this powerful library for several years, I want to share some insights and best practices that have shaped my approach to building modern applications.\n\n## Why React Continues to Dominate\n\nReact's component-based architecture has fundamentally changed how we think about building user interfaces. The ability to create reusable, composable components makes development more efficient and maintainable.\n\n### Key Benefits I've Experienced\n\n- **Component Reusability**: Write once, use everywhere\n- **Virtual DOM**: Excellent performance optimizations\n- **Rich Ecosystem**: Vast community and tools\n- **Developer Experience**: Great debugging and hot reloading\n\n## Best Practices I've Learned\n\n### 1. Component Structure\nAlways keep your components small and focused. A component should have a single responsibility.\n\n### 2. State Management\nUse the right tool for the job. For simple state, useState is perfect.\n\n### 3. Performance Optimization\n- Use React.memo for expensive components\n- Implement proper dependency arrays in useEffect\n- Consider code splitting for large applications\n\n## Looking Forward\n\nThe React ecosystem continues to evolve rapidly. With React 18's concurrent features and Server Components, there's always something new to learn.",
-      "image": "../../../src/assets/blogs/mainteachingstudents.jpeg",
+      "image": "../../../src/assets/images/reactJscode.png",
       "author": {
-        "name": "Clement Phoshoko",
+        "name": "Ndaedzo Clement Phoshoko",
         "avatar": "/src/assets/images/author-profile.jpg",
         "title": "Full Stack Developer"
       },
@@ -18,174 +35,114 @@
       "featured": true
     },
     {
-      "id": "javascript-fundamentals",
-      "title": "Mastering JavaScript Fundamentals for Modern Development",
-      "description": "Dive deep into the core concepts of JavaScript that every developer should know. From closures to async programming, this comprehensive guide covers it all.",
-      "content": "# Mastering JavaScript Fundamentals for Modern Development\n\nJavaScript is the backbone of modern web development, and understanding its core concepts is crucial for any developer.\n\n## Understanding Closures\n\nClosures are one of JavaScript's most powerful features. A closure gives you access to an outer function's scope from an inner function.\n\n## Async Programming\n\nModern JavaScript development heavily relies on asynchronous programming. Understanding promises, async/await, and the event loop is essential.\n\n## ES6+ Features\n\nThe modern JavaScript ecosystem is built on ES6+ features. From arrow functions to destructuring, these features make code more readable.",
-      "image": "/src/assets/images/danieljoshualaptop.jpg",
+      "id": "sharing-knowledge-through-tutoring",
+      "title": "Sharing Knowledge: My Journey in Tutoring and Mentorship",
+      "description": "A reflection on my experience as a tutor and mentor in mathematics and computer science, and how teaching shaped my academic and professional growth.",
+      "content": "# Sharing Knowledge: My Journey in Tutoring and Mentorship\n\nOne of the most rewarding parts of my journey has been the opportunity to share knowledge with others. For the past three years, I have worked as a **tutor in mathematics and computer science** at the University of Limpopo. Teaching wasn’t just about explaining concepts — it became a way for me to grow alongside my students.\n\n## Why Tutoring Matters to Me\n\nI believe knowledge is most powerful when shared. As a tutor, I wasn’t only helping students pass their modules, I was helping them **build confidence, think critically, and believe in their own abilities**. Watching students go from uncertainty to mastery gave me a sense of fulfillment that fueled my own love for mathematics and technology.\n\n## Lessons I’ve Learned as a Tutor\n\n- **Patience is essential**: Every student learns at a different pace, and it’s important to meet them where they are.\n- **Clarity builds confidence**: Simplifying complex ideas makes them more approachable and memorable.\n- **Mentorship extends beyond academics**: Through the **CAE Baditi Student Support Programme**, I also helped first-year students adjust to university life, easing both academic and social challenges.\n\n## The Impact of Tutoring\n\nTutoring refined my ability to explain abstract concepts in ways that are practical and relatable. It strengthened my communication skills, teamwork, and leadership. Most importantly, it reminded me that teaching is not one-directional — every interaction with my students also taught me something new.\n\n## Looking Forward\n\nAs I continue to grow in mathematics and technology, **mentorship remains at the heart of my journey**. Whether I’m teaching a concept in linear algebra, guiding someone through a coding project, or mentoring students on how to navigate academic challenges, I see tutoring as part of my identity.\n\nKnowledge has the power to change lives, and I want to continue being part of that transformation — just as others once shared their knowledge with me.\n",
+      "image": "../../../src/assets/blogs/mainteachingstudents.jpeg",
       "author": {
-        "name": "Clement Phoshoko",
+        "name": "Ndaedzo Clement Phoshoko",
         "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
+        "title": "Tutor | Mathematician | Software Developer"
       },
-      "publishDate": "12 Dec 2024",
-      "readTime": "7 min read",
-      "tags": ["JavaScript", "Programming", "Web Development"],
-      "category": "Programming",
-      "featured": false
-    },
-    {
-      "id": "web-development-tools",
-      "title": "Essential Web Development Tools Every Developer Should Know",
-      "description": "Discover the must-have tools and technologies that can boost your productivity and improve your development workflow. From VS Code extensions to deployment platforms.",
-      "content": "# Essential Web Development Tools Every Developer Should Know\n\nThe right tools can make all the difference in your development workflow.\n\n## Code Editors and IDEs\n\nA good code editor is your primary tool. VS Code has become the industry standard.\n\n## Version Control\n\nGit is essential for any developer. Understanding branching strategies and collaborative workflows is crucial.\n\n## Package Managers\n\nUnderstanding package management is essential for managing dependencies in your projects.",
-      "image": "/src/assets/images/reactJscode.png",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "10 Dec 2024",
-      "readTime": "6 min read",
-      "tags": ["Tools", "Productivity", "Development"],
-      "category": "Tools",
-      "featured": false
-    },
-    {
-      "id": "css-advanced-techniques",
-      "title": "Advanced CSS Techniques for Modern Web Design",
-      "description": "Learn cutting-edge CSS techniques including Grid, Flexbox, animations, and responsive design patterns that will take your styling skills to the next level.",
-      "content": "# Advanced CSS Techniques for Modern Web Design\n\nCSS has evolved significantly over the years, and modern CSS offers powerful features that can transform your web designs.\n\n## CSS Grid vs Flexbox\n\nUnderstanding when to use CSS Grid versus Flexbox is crucial for creating complex layouts.\n\n## CSS Custom Properties\n\nCSS custom properties (variables) allow you to create more maintainable and dynamic stylesheets.\n\n## Modern CSS Features\n\nFrom container queries to CSS-in-JS, the CSS landscape is constantly evolving.",
-      "image": "/src/assets/images/danieljoshualaptop.jpg",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "8 Dec 2024",
-      "readTime": "8 min read",
-      "tags": ["CSS", "Design", "Frontend"],
-      "category": "Design",
-      "featured": false
-    },
-    {
-      "id": "nodejs-backend-development",
-      "title": "Building Scalable Backend Applications with Node.js",
-      "description": "Master the art of building robust and scalable backend applications using Node.js. Learn about Express, databases, authentication, and deployment strategies.",
-      "content": "# Building Scalable Backend Applications with Node.js\n\nNode.js has become one of the most popular platforms for building backend applications.\n\n## Setting Up Your Development Environment\n\nA proper development environment is crucial for productive Node.js development.\n\n## Express.js Best Practices\n\nExpress.js is the most popular web framework for Node.js. Learning best practices is essential.\n\n## Database Integration\n\nUnderstanding database integration patterns is crucial for backend development.\n\n## Authentication and Security\n\nImplementing proper authentication and security measures is essential for any production application.",
-      "image": "/src/assets/images/reactJscode.png",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "5 Dec 2024",
-      "readTime": "9 min read",
-      "tags": ["Node.js", "Backend", "API"],
-      "category": "Backend",
-      "featured": false
-    },
-    {
-      "id": "database-design-principles",
-      "title": "Database Design Principles for Web Applications",
-      "description": "Understand the fundamentals of database design, normalization, indexing, and query optimization. Essential knowledge for building efficient web applications.",
-      "content": "# Database Design Principles for Web Applications\n\nGood database design is the foundation of any successful web application.\n\n## Normalization and Denormalization\n\nUnderstanding when to normalize and when to denormalize your database is crucial.\n\n## Indexing Strategies\n\nProper indexing can dramatically improve query performance.\n\n## Query Optimization\n\nWriting efficient queries is essential for application performance.",
-      "image": "/src/assets/images/danieljoshualaptop.jpg",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "3 Dec 2024",
-      "readTime": "6 min read",
-      "tags": ["Database", "SQL", "Performance"],
-      "category": "Database",
-      "featured": false
-    },
-    {
-      "id": "api-design-best-practices",
-      "title": "RESTful API Design: Best Practices and Common Pitfalls",
-      "description": "Learn how to design clean, scalable, and maintainable REST APIs. Discover common mistakes to avoid and industry best practices that will make your APIs a joy to use.",
-      "content": "# RESTful API Design: Best Practices and Common Pitfalls\n\nDesigning a good API is crucial for the success of any application.\n\n## REST Principles\n\nUnderstanding the core principles of REST is essential for designing good APIs.\n\n## API Versioning\n\nAs your API evolves, proper versioning strategies become crucial.\n\n## Error Handling\n\nConsistent error handling is essential for a good developer experience.",
-      "image": "/src/assets/images/danieljoshualaptop.jpg",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "1 Dec 2024",
-      "readTime": "7 min read",
-      "tags": ["API", "REST", "Backend"],
-      "category": "API",
-      "featured": false
-    },
-    {
-      "id": "git-workflow-strategies",
-      "title": "Git Workflow Strategies for Team Development",
-      "description": "Master different Git workflow strategies including GitFlow, GitHub Flow, and GitLab Flow. Learn when to use each approach and how to implement them effectively in your team.",
-      "content": "# Git Workflow Strategies for Team Development\n\nEffective Git workflows are essential for team collaboration.\n\n## GitFlow\n\nGitFlow is a branching model that defines a strict branching structure designed around project releases.\n\n## GitHub Flow\n\nGitHub Flow is a lightweight, branch-based workflow designed around deployments.\n\n## GitLab Flow\n\nGitLab Flow combines feature-driven development with feature branches and environment branches.",
-      "image": "/src/assets/images/reactJscode.png",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "28 Nov 2024",
+      "publishDate": "15 Sep 2025",
       "readTime": "5 min read",
-      "tags": ["Git", "Workflow", "Collaboration"],
-      "category": "Workflow",
-      "featured": false
+      "tags": ["Tutoring", "Mentorship", "Teaching", "Mathematics", "Knowledge Sharing"],
+      "category": "Teaching Journey",
+      "featured": true
     },
     {
-      "id": "testing-strategies",
-      "title": "Comprehensive Testing Strategies for Web Applications",
-      "description": "Explore different testing approaches including unit tests, integration tests, and end-to-end testing. Learn how to build a robust testing strategy for your web applications.",
-      "content": "# Comprehensive Testing Strategies for Web Applications\n\nTesting is crucial for building reliable web applications.\n\n## Unit Testing\n\nUnit tests focus on testing individual components or functions in isolation.\n\n## Integration Testing\n\nIntegration tests verify that different parts of your application work together correctly.\n\n## End-to-End Testing\n\nE2E tests simulate real user interactions with your application.",
-      "image": "/src/assets/images/danieljoshualaptop.jpg",
+      "id": "essential-web-development-tools",
+      "title": "Essential Web Development Tools Every Developer Should Know",
+      "description": "An overview of the most important tools that make web development faster, smarter, and more efficient, with insights from my own journey as a developer.",
+      "content": "# Essential Web Development Tools Every Developer Should Know\n\nWeb development is one of the most dynamic areas in technology. With new frameworks, libraries, and platforms emerging every year, it’s important for developers to stay up to date with the tools that make building modern applications easier and more effective. Over the course of my journey as a developer, I’ve worked with a wide range of technologies, and here are some **essential tools every developer should know**.\n\n## 1. Code Editors and IDEs\nYour development environment is where everything starts. Tools like **Visual Studio Code**, **IntelliJ IDEA**, and **Android Studio** provide features such as syntax highlighting, extensions, and debugging that make development smoother. I personally rely on VS Code for web development projects because of its flexibility and rich ecosystem of plugins.\n\n## 2. Version Control with Git\n**Git** is more than just a tool — it’s a safety net. With platforms like **GitHub** and **GitLab**, version control makes collaboration seamless, ensures code history is preserved, and allows developers to experiment without fear of losing progress. For me, Git has been essential in both solo and collaborative projects.\n\n## 3. Frontend Frameworks and Libraries\nModern web applications thrive on interactivity and scalability. Frameworks and libraries like **React.js**, **Angular**, and **Vue.js** allow developers to build reusable components and manage complex UIs efficiently. I’ve used **React** extensively in building full-stack projects, and its ecosystem (hooks, context API, React Router) has been a game-changer.\n\n## 4. Backend Frameworks\nFor server-side development, frameworks like **Node.js with Express**, **Spring Boot (Java)**, and **Django (Python)** simplify building APIs and managing requests. I particularly enjoy working with **Node.js/Express** because of its simplicity and how naturally it integrates with frontend tools.\n\n## 5. Databases and ORMs\nStoring and retrieving data efficiently is at the heart of any web application. Tools like **PostgreSQL, MySQL**, and **MongoDB** cover a wide range of database needs. To make development faster, Object-Relational Mappers (ORMs) like **Sequelize** (for Node.js) abstract SQL queries into clean, manageable code. In my projects, Sequelize has been key to structuring database interactions.\n\n## 6. Collaboration and Project Management Tools\nSoftware development is rarely a solo activity. Tools like **Jira**, **Trello**, and **Slack** make collaboration easier by tracking tasks, managing sprints, and improving communication. I’ve also seen how **Agile practices** supported by these tools help projects stay on track and adaptable.\n\n## 7. Deployment and Cloud Services\nGetting applications from local machines to production requires strong deployment tools. **Docker** for containerization, **GitHub Actions** for CI/CD, and cloud platforms like **Huawei Cloud** or **Oracle Cloud** ensure smooth deployment pipelines. Learning to deploy apps effectively has taught me how important DevOps skills are in modern development.\n\n## Final Thoughts\nThe web development landscape is vast, and no single developer can master every tool. But knowing the essentials — from editors and frameworks to version control and deployment — gives you a strong foundation to grow and adapt. For me, combining these tools with my background in mathematics and problem-solving has made development not just a career path, but a creative journey.\n",
+      "image": "../../../src/assets/images/reactJscode.png",
       "author": {
-        "name": "Clement Phoshoko",
+        "name": "Ndaedzo Clement Phoshoko",
         "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
+        "title": "Software Developer | Mathematician"
       },
-      "publishDate": "25 Nov 2024",
-      "readTime": "8 min read",
-      "tags": ["Testing", "Quality", "Development"],
-      "category": "Testing",
-      "featured": false
-    },
-    {
-      "id": "performance-optimization",
-      "title": "Web Performance Optimization: Speed Up Your Applications",
-      "description": "Learn essential techniques to optimize your web applications for better performance, user experience, and SEO rankings. From code splitting to image optimization.",
-      "content": "# Web Performance Optimization: Speed Up Your Applications\n\nPerformance optimization is crucial for modern web applications.\n\n## Code Splitting\n\nCode splitting allows you to split your code into smaller chunks that can be loaded on demand.\n\n## Image Optimization\n\nOptimizing images can significantly improve your application's performance.\n\n## Caching Strategies\n\nImplementing proper caching strategies can reduce load times and improve user experience.\n\n## Bundle Analysis\n\nUnderstanding your bundle size and composition is essential for optimization.",
-      "image": "/src/assets/images/reactJscode.png",
-      "author": {
-        "name": "Clement Phoshoko",
-        "avatar": "/src/assets/images/author-profile.jpg",
-        "title": "Full Stack Developer"
-      },
-      "publishDate": "22 Nov 2024",
+      "publishDate": "15 Sep 2025",
       "readTime": "6 min read",
-      "tags": ["Performance", "Optimization", "Web Development"],
-      "category": "Performance",
+      "tags": ["Web Development", "Tools", "React", "Node.js", "Git"],
+      "category": "Development",
+      "featured": true
+    },
+    {
+      "id": "the-curious-developer",
+      "title": "The Curious Developer: How I Stay Inspired Every Day",
+      "description": "A look into how my daily habits — from reading tech news to exploring GitHub projects — fuel my passion as a developer.",
+      "content": "# The Curious Developer: How I Stay Inspired Every Day\n\nCuriosity is my greatest strength as a developer. Every day, I look for ways to feed my mind with fresh ideas and innovations that push me to grow. My mornings often begin with a quick dive into **tech news** and updates from industry leaders. Reading about the latest frameworks, cloud technologies, and AI advancements keeps me on my toes and sparks new ideas for projects.\n\nI also spend time exploring **GitHub repositories and open-source projects**, not just to learn from other developers but to see how creativity translates into code. This habit has helped me discover tools and techniques that I later applied to my own projects.\n\nEven outside of coding, my curiosity shines. Whether it’s researching new algorithms, learning a new language, or following the journey of innovators like Elon Musk and Satya Nadella, I thrive on constant discovery. For me, being a developer isn’t just a career — it’s a lifestyle built on curiosity and growth.\n",
+      "image": "../../../src/assets/blogs/chatgptcuriosity.png",
+      "author": {
+        "name": "Ndaedzo Clement Phoshoko",
+        "avatar": "/src/assets/images/author-profile.jpg",
+        "title": "Software Developer | Mathematician"
+      },
+      "publishDate": "15 Sep 2025",
+      "readTime": "5 min read",
+      "tags": ["Curiosity", "Innovation", "Learning", "Technology"],
+      "category": "Personal Growth",
+      "featured": true
+    },
+    {
+      "id": "weekends-of-exploration",
+      "title": "Weekends of Exploration: Finding Inspiration Beyond Code",
+      "description": "How I spend weekends exploring new places and experiences, and how those adventures fuel my creativity as a developer.",
+      "content": "# Weekends of Exploration: Finding Inspiration Beyond Code\n\nWeekends are my time to step away from the screen and **explore the world around me**. I love visiting new places, whether it’s a quiet spot in nature, a museum, or a new part of town I’ve never been to. These experiences give me a fresh perspective that I carry back into my work.\n\nExploration helps me stay creative. When I’m outside, observing how people interact with the world or reflecting on the design of everyday objects, I often find inspiration for solving problems in code. It’s a reminder that technology is meant to serve people — and understanding people makes me a better developer.\n\nSometimes, my explorations are as simple as enjoying a good glass of wine in a new setting. Savoring different flavors reminds me of how diverse perspectives can enrich life — much like diverse approaches improve software development. It’s a moment of pause that fuels fresh ideas.\n\nBalancing work and exploration also keeps me grounded. Weekends of adventure remind me that curiosity doesn’t end with programming — it extends into how I live my life.\n",
+      "image": "../../../src/assets/blogs/wine.jpg",
+      "author": {
+        "name": "Ndaedzo Clement Phoshoko",
+        "avatar": "/src/assets/images/author-profile.jpg",
+        "title": "Explorer | Software Developer"
+      },
+      "publishDate": "16 Sep 2025",
+      "readTime": "4 min read",
+      "tags": ["Exploration", "Balance", "Creativity", "Lifestyle", "FavouriteWine"],
+      "category": "Lifestyle",
+      "featured": true
+    },
+    {
+      "id": "sci-fi-and-technology",
+      "title": "What Sci-Fi Taught Me About Technology and Possibilities",
+      "description": "Exploring how science fiction movies and shows have shaped my curiosity and inspired me as a developer.",
+      "content": "# What Sci-Fi Taught Me About Technology and Possibilities\n\nScience fiction has always been more than entertainment for me — it’s a source of **imagination and inspiration**. Watching movies and shows that explore artificial intelligence, robotics, and space travel has shaped the way I think about technology.\n\nCharacters like **Spider-Man** remind me of responsibility and creativity, while **Iron Man and Tony Stark** represent the genius and boldness behind technological innovation. Stark’s ability to combine engineering with imagination has always inspired me to think of how code can be more than logic — it can be vision brought to life.\n\nEven shows like *F Is for Family* offer lessons, though in a lighter way — reminding me that behind every dreamer or innovator is a real human life, filled with humor, struggles, and balance. It’s a reminder that technology should serve people, not the other way around.\n\nSci-fi makes me ask bold questions: *What if machines could learn faster than humans? What if communication between planets became as easy as sending a message today?* These questions fuel my drive to explore fields like **AI, cryptography, and data science**.\n\nBeyond the fiction, many of today’s innovations were once ideas in sci-fi — from voice assistants to self-driving cars. This connection between imagination and reality motivates me to believe that the code I write today could contribute to the possibilities of tomorrow.\n",
+      "image": "../../../src/assets/blogs/chatgptimage.png",
+      "author": {
+        "name": "Ndaedzo Clement Phoshoko",
+        "avatar": "/src/assets/images/author-profile.jpg",
+        "title": "Sci-Fi Enthusiast | Software Developer"
+      },
+      "publishDate": "17 Sep 2025",
+      "readTime": "5 min read",
+      "tags": ["Sci-Fi", "Technology", "Inspiration", "Innovation", "Movies"],
+      "category": "Inspiration",
       "featured": false
+    },
+    {
+      "id": "curiosity-as-my-greatest-tool",
+      "title": "Why Curiosity is My Greatest Tool as a Developer",
+      "description": "A reflection on how curiosity fuels my growth, from experimenting with new frameworks to solving real-world problems.",
+      "content": "# Why Curiosity is My Greatest Tool as a Developer\n\nIf there’s one quality that defines my journey as a developer, it’s **curiosity**. Curiosity pushes me to ask questions, dig deeper, and never settle for surface-level understanding. It’s what led me to explore **new frameworks like React**, dive into **backend tools like Node.js and Express**, and experiment with **databases and ORMs like PostgreSQL and Sequelize**.\n\nCuriosity also means I’m not afraid of challenges. When something doesn’t work, instead of giving up, I see it as an opportunity to learn. Every bug becomes a puzzle, and every new tool becomes a door to discovery.\n\nIn many ways, curiosity connects all parts of my life — from watching sci-fi shows to exploring new places on weekends. It keeps me open-minded, innovative, and constantly growing. For me, curiosity isn’t just a habit — it’s the most important tool in my developer toolkit.\n",
+      "image": "../../../src/assets/blogs/clementandgranny.jpg",
+      "author": {
+        "name": "Ndaedzo Clement Phoshoko",
+        "avatar": "/src/assets/images/author-profile.jpg",
+        "title": "Curious Learner | Software Developer"
+      },
+      "publishDate": "18 Sep 2025",
+      "readTime": "5 min read",
+      "tags": ["Curiosity", "Learning", "Growth", "Software Development"],
+      "category": "Mindset",
+      "featured": true
     }
   ],
   "categories": [
-    "Development",
-    "Programming", 
-    "Tools",
-    "Design",
-    "Backend",
-    "Database",
-    "API",
-    "Workflow",
-    "Testing",
-    "Performance"
+    "Career Journey", "Development", "Teaching Journey", "Personal Growth", "Lifestyle", "Inspiration", "Mindset" 
   ],
   "authors": [
     {
-      "name": "Clement Phoshoko",
+      "name": "Ndaedzo Clement Phoshoko",
       "avatar": "/src/assets/images/author-profile.jpg",
       "title": "Full Stack Developer",
       "bio": "Passionate developer with expertise in modern web technologies and best practices."

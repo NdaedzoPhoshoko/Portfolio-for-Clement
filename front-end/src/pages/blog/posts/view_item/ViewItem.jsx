@@ -9,6 +9,87 @@ const ViewItem = () => {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  // Minimal Markdown to HTML converter for headings, lists, bold/italic, inline code, links, and paragraphs
+  const convertMarkdownToHtml = (markdown) => {
+    if (!markdown) return '';
+
+    const escapeHtml = (str) =>
+      str
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+
+    // Process block elements line-by-line, handling lists as groups
+    const lines = markdown.split(/\r?\n/);
+    const htmlBlocks = [];
+    let listBuffer = [];
+
+    const flushList = () => {
+      if (listBuffer.length > 0) {
+        const items = listBuffer
+          .map((item) => `<li>${item}</li>`) 
+          .join('');
+        htmlBlocks.push(`<ul>${items}</ul>`);
+        listBuffer = [];
+      }
+    };
+
+    const inlineTransforms = (text) => {
+      // Inline code: `code`
+      let t = text.replace(/`([^`]+)`/g, '<code>$1</code>');
+      // Bold: **text**
+      t = t.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      // Italic: *text*
+      t = t.replace(/(^|\s)\*([^*]+)\*(?=\s|$)/g, '$1<em>$2</em>');
+      // Links: [text](url)
+      t = t.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+      return t;
+    };
+
+    for (let i = 0; i < lines.length; i++) {
+      const rawLine = lines[i];
+      const line = rawLine.trim();
+
+      if (line.length === 0) {
+        // blank line separates paragraphs/lists
+        flushList();
+        continue;
+      }
+
+      // Headings
+      if (line.startsWith('### ')) {
+        flushList();
+        htmlBlocks.push(`<h3>${inlineTransforms(escapeHtml(line.slice(4)))}</h3>`);
+        continue;
+      }
+      if (line.startsWith('## ')) {
+        flushList();
+        htmlBlocks.push(`<h2>${inlineTransforms(escapeHtml(line.slice(3)))}</h2>`);
+        continue;
+      }
+      if (line.startsWith('# ')) {
+        flushList();
+        htmlBlocks.push(`<h1>${inlineTransforms(escapeHtml(line.slice(2)))}</h1>`);
+        continue;
+      }
+
+      // Unordered list item: - item or * item
+      if (/^[-*]\s+/.test(line)) {
+        const itemText = line.replace(/^[-*]\s+/, '');
+        listBuffer.push(inlineTransforms(escapeHtml(itemText)));
+        continue;
+      }
+
+      // Paragraph
+      flushList();
+      htmlBlocks.push(`<p>${inlineTransforms(escapeHtml(line))}</p>`);
+    }
+    // Flush any remaining list
+    flushList();
+
+    return htmlBlocks.join('');
+  };
+
   useEffect(() => {
     // Simulate loading delay
     const timer = setTimeout(() => {
@@ -99,7 +180,7 @@ const ViewItem = () => {
       {/* Content Section */}
       <div className="view-item-content">
         <div className="content-wrapper">
-          <div className="post-content" dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br>') }} />
+          <div className="post-content" dangerouslySetInnerHTML={{ __html: convertMarkdownToHtml(post.content) }} />
         </div>
       </div>
     </div>
