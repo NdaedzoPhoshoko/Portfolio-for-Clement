@@ -8,7 +8,6 @@ import {
   faPenToSquare,
   faBook,
   faEnvelope,
-  faPhone,
 } from "@fortawesome/free-solid-svg-icons";
 
 import './NavBar.css'
@@ -124,15 +123,6 @@ const Navbar = () => {
               <div className="mega-menu-text">
                 <h4>Email Me</h4>
                 <p>Reach out directly via email for collaboration opportunities, technical discussions, project inquiries, or any questions about my work and expertise in software development.</p>
-              </div>
-            </div>
-            <div className="mega-menu-item">
-              <div className="mega-menu-icon">
-                <FontAwesomeIcon icon={faPhone} className="icon-schedule-call" /> {/* Icon for Schedule a Call */}
-              </div>
-              <div className="mega-menu-text">
-                <h4>Schedule a Call</h4>
-                <p>Book a personalized consultation or meeting to discuss potential collaborations, technical consultations, mentorship opportunities, or in-depth project planning sessions.</p>
               </div>
             </div>
           </div>
