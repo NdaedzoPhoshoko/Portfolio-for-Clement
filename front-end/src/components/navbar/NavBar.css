@@ -7,6 +7,25 @@
   color: rgba(255, 255, 255, 0.783);
   position: relative; /* Added for positioning context */
   z-index: 1000; /* Ensure navbar stays above other content */
+  animation: fallDownBounce 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+@keyframes fallDownBounce {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  40% {
+    transform: translateY(100px);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar-left {

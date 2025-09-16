@@ -33,6 +33,25 @@
   padding-right: 2rem;
   padding-left: 4rem;
   padding-top: 8rem;
+  animation: bounceDown 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2.1s both;
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(15px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .top-right-container {
@@ -45,6 +64,25 @@
   padding-right: 4rem;
   transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
   transition: transform 0.3s ease;
+  animation: slideInFromLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateX(-150px);
+    opacity: 0;
+  }
+  60% {
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateX(10px);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateX(-2px);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) translateX(0);
+    opacity: 1;
+  }
 }
 
 .main-container {
@@ -79,15 +117,35 @@
 
 
 
-.greeting-heading {
-  font-weight: 700;
-  color: #ffffff;
-  margin: 1rem 0 0 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+.greeting-intro {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  color: #64ffda;
+  margin: 2rem 0 1rem 0;
+  font-weight: 400;
   animation: fadeInUp 1s ease-out;
-  transition: font-size 0.1s ease-out;
+  text-align: left;
+}
+
+.greeting-name {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #ccd6f6;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 1s ease-out 0.2s both;
+  text-align: left;
+}
+
+.greeting-tagline {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #8892b0;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 1s ease-out 0.4s both;
   text-align: left;
 }
 
@@ -125,15 +183,14 @@
   }
 }
 
-.greeting-subtitle {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin: 1rem 0 0 0;
-  max-width: 500px;
+.greeting-description {
+  font-size: 1.2rem;
+  color: #8892b0;
+  margin: 0;
+  max-width: 540px;
   line-height: 1.6;
   font-weight: 300;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  animation: fadeInUp 1s ease-out 0.3s both;
+  animation: fadeInUp 1s ease-out 0.6s both;
   text-align: left;
 }
 
@@ -174,12 +231,15 @@
 
 /* Responsive design */
 @media (max-width: 768px) {
-  .greeting-heading {
-    font-size: 2.5rem;
-    padding: 0 1rem;
+  .greeting-name {
+    font-size: 2.4rem;
   }
   
-  .greeting-subtitle {
+  .greeting-tagline {
+    font-size: 2.4rem;
+  }
+  
+  .greeting-description {
     font-size: 1.1rem;
     padding: 0 1rem;
   }
@@ -191,11 +251,15 @@
 }
 
 @media (max-width: 480px) {
-  .greeting-heading {
+  .greeting-name {
     font-size: 2rem;
   }
   
-  .greeting-subtitle {
+  .greeting-tagline {
+    font-size: 2rem;
+  }
+  
+  .greeting-description {
     font-size: 1rem;
   }
   

@@ -5,6 +5,9 @@ import blogData from '../data.json';
 
 const ItemGrid = () => {
   const [allBlogPosts, setAllBlogPosts] = useState([]);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+  const [filterType, setFilterType] = useState('all');
+  const [filterValue, setFilterValue] = useState('');
 
   useEffect(() => {
     // Transform the data to match the Item component props
@@ -15,11 +18,37 @@ const ItemGrid = () => {
       image: post.image,
       authorName: post.author.name,
       authorAvatar: post.author.avatar,
-      date: post.publishDate
+      date: post.publishDate,
+      tags: post.tags || [],
+      category: post.category || ''
     }));
     
     setAllBlogPosts(transformedPosts);
+    setFilteredPosts(transformedPosts);
   }, []);
+
+  // Filter posts based on selected criteria
+  useEffect(() => {
+    if (filterType === 'all' || !filterValue) {
+      setFilteredPosts(allBlogPosts);
+    } else {
+      const filtered = allBlogPosts.filter(post => {
+        switch (filterType) {
+          case 'title':
+            return post.title.toLowerCase().includes(filterValue.toLowerCase());
+          case 'date':
+            return post.date.toLowerCase().includes(filterValue.toLowerCase());
+          case 'tag':
+            return post.tags.some(tag => tag.toLowerCase().includes(filterValue.toLowerCase()));
+          case 'category':
+            return post.category.toLowerCase().includes(filterValue.toLowerCase());
+          default:
+            return true;
+        }
+      });
+      setFilteredPosts(filtered);
+    }
+  }, [allBlogPosts, filterType, filterValue]);
 
   const [visiblePosts, setVisiblePosts] = useState(6);
   const [isLoading, setIsLoading] = useState(false);
@@ -28,16 +57,41 @@ const ItemGrid = () => {
     setIsLoading(true);
     // Simulate loading delay
     setTimeout(() => {
-      setVisiblePosts(prev => Math.min(prev + 6, allBlogPosts.length));
+      setVisiblePosts(prev => Math.min(prev + 6, filteredPosts.length));
       setIsLoading(false);
     }, 500);
   };
 
-  const displayedPosts = allBlogPosts.slice(0, visiblePosts);
-  const hasMorePosts = visiblePosts < allBlogPosts.length;
+  const displayedPosts = filteredPosts.slice(0, visiblePosts);
+  const hasMorePosts = visiblePosts < filteredPosts.length;
 
   return (
     <div className="item-grid-container">
+      {/* Filter Component */}
+      <div className="filter-container">
+        <div className="filter-controls">
+          <select 
+            className="filter-select"
+            value={filterType}
+            onChange={(e) => setFilterType(e.target.value)}
+          >
+            <option value="all">All Posts</option>
+            <option value="title">Title</option>
+            <option value="date">Date</option>
+            <option value="tag">Tag</option>
+            <option value="category">Category</option>
+          </select>
+          <input
+            type="text"
+            className="filter-input"
+            placeholder={`Filter by ${filterType === 'all' ? 'anything' : filterType}...`}
+            value={filterValue}
+            onChange={(e) => setFilterValue(e.target.value)}
+            disabled={filterType === 'all'}
+          />
+        </div>
+      </div>
+
       <div className="item-grid">
         {displayedPosts.map((post) => (
           <Item

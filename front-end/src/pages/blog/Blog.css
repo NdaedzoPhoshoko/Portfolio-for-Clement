@@ -16,6 +16,25 @@
   width: 100%;
   background: none;
   margin-top: 2rem;
+  animation: bounceInUp 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s both;
+}
+
+@keyframes bounceInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Left Section - Text */
@@ -25,7 +44,26 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
-  background: none
+  background: none;
+  animation: bounceInLeft 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+}
+
+@keyframes bounceInLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .text-content {
@@ -63,6 +101,25 @@
   justify-content: center;
   padding: 3rem;
   background: none;
+  animation: bounceInRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s both;
+}
+
+@keyframes bounceInRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .image-container {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
@@ -44,10 +44,6 @@ const programmingLanguages = [
 ];
 
 const Home = () => {
-  const [greeting, setGreeting] = useState('');
-  const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const scrollToMainContainer = () => {
     const mainContainer = document.querySelector('.main-container');
     if (mainContainer) {
@@ -55,52 +51,15 @@ const Home = () => {
     }
   };
 
-  useEffect(() => {
-    const getGreeting = () => {
-      const currentHour = new Date().getHours();
-      
-      if (currentHour >= 5 && currentHour < 12) {
-        return 'Good Morning';
-      } else if (currentHour >= 12 && currentHour < 17) {
-        return 'Good Afternoon';
-      } else if (currentHour >= 17 && currentHour < 21) {
-        return 'Good Evening';
-      } else {
-        return 'Good Night';
-      }
-    };
-
-    setGreeting(getGreeting());
-  }, []);
-
-  useEffect(() => {
-    const fullText = `${greeting}, Explorer`;
-    
-    if (greeting && currentIndex < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayText(fullText.slice(0, currentIndex + 1));
-        setCurrentIndex(currentIndex + 1);
-      }, 50);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [greeting, currentIndex]);
-
   return (
     <div className="home-container">
       <div className="top-container">
         <div className="top-left-container">
-          <h1 
-            className="greeting-heading"
-            style={{
-              fontSize: `${Math.max(2.5, 6 - (currentIndex / 5))}rem`
-            }}
-          >
-            {displayText}
-            <span className="cursor">|</span>
-          </h1>
-          <p className="greeting-subtitle">
-            Where innovation meets creativity, and technology transforms ideas into reality. I have built this website using ReactJs, NodeJs, & ExpressJS. You are welcomed to explore my work and learn more about me.
+          <p className="greeting-intro">Hi, my name is</p>
+          <h1 className="greeting-name">Clement Phoshoko.</h1>
+          <h2 className="greeting-tagline">I build tech things.</h2>
+          <p className="greeting-description">
+            I'm a full-stack developer who gets way too excited about clean code, efficient algorithms, and elegant data structures. Currently obsessing over building scalable applications with proper error handling, comprehensive testing, and documentation that actually makes sense.
           </p>
           <div className="scroll-indicator" onClick={scrollToMainContainer}>
             <FontAwesomeIcon icon={faChevronDown} className="chevron-down" />
