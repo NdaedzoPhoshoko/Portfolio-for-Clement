@@ -8,6 +8,8 @@ import {
   faPenToSquare,
   faBook,
   faEnvelope,
+  faBars,
+  faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
 import './NavBar.css'
@@ -19,9 +21,20 @@ const Navbar = () => {
   const [showBlogMegaMenu, setShowBlogMegaMenu] = useState(false); // State for blog mega menu visibility
   const [showAboutMegaMenu, setShowAboutMegaMenu] = useState(false); // State for about mega menu visibility
   const [showContactMegaMenu, setShowContactMegaMenu] = useState(false); // State for contact mega menu visibility
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // State for mobile menu visibility
 
   // Check if current page is home
   const isHomePage = location.pathname === '/';
+
+  // Toggle mobile menu
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  // Close mobile menu when navigating
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <nav className="navbar">
@@ -33,6 +46,80 @@ const Navbar = () => {
           </div>
         )}
       </div>
+      
+      {/* Mobile menu button */}
+      <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+        <FontAwesomeIcon icon={isMobileMenuOpen ? faTimes : faBars} />
+      </button>
+
+      {/* Mobile menu overlay */}
+      {isMobileMenuOpen && (
+        <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
+          <div className="mobile-sidebar-content" onClick={(e) => e.stopPropagation()}>
+            {/* Profile Section */}
+            <div className="mobile-profile-section">
+              <div className="mobile-profile-avatar">
+                <img src={profileImage} alt="Profile" />
+              </div>
+              <div className="mobile-profile-info">
+                <h3>Clement Phoshoko</h3>
+                <p>Full Stack Developer</p>
+              </div>
+            </div>
+
+            {/* Navigation Menu */}
+            <nav className="mobile-nav-menu">
+              <div className="mobile-nav-item">
+                <Link to="/" onClick={closeMobileMenu} className="mobile-nav-link">
+                  <FontAwesomeIcon icon={faLightbulb} />
+                  <span>Home</span>
+                </Link>
+              </div>
+
+              <div className="mobile-nav-item">
+                <div className="mobile-nav-link">
+                  <FontAwesomeIcon icon={faTrophy} />
+                  <span>About Me</span>
+                </div>
+                <ul className="mobile-nav-submenu">
+                  <li onClick={() => { navigate('/journey'); closeMobileMenu(); }}>
+                    <span>My Journey</span>
+                  </li>
+                  <li onClick={() => { navigate('/achievements'); closeMobileMenu(); }}>
+                    <span>Achievements</span>
+                  </li>
+                  <li onClick={() => { navigate('/resume'); closeMobileMenu(); }}>
+                    <span>My Resume</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mobile-nav-item">
+                <div className="mobile-nav-link">
+                  <FontAwesomeIcon icon={faPenToSquare} />
+                  <span>Blog World</span>
+                </div>
+                <ul className="mobile-nav-submenu">
+                  <li onClick={() => { navigate('/blog'); closeMobileMenu(); }}>
+                    <span>Latest Posts</span>
+                  </li>
+                  <li>
+                    <span>Tutorials</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mobile-nav-item">
+                <Link to="/contact" onClick={closeMobileMenu} className="mobile-nav-link">
+                  <FontAwesomeIcon icon={faEnvelope} />
+                  <span>Contact Me</span>
+                </Link>
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
+
       <ul className="navbar-right">
         <li>
           <Link to="/">Home</Link>

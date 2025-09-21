@@ -11,7 +11,7 @@ const Contact = () => {
             Trying to
           </h1>
           <h2 className="contact-highlight-word">
-            creative
+            be creative
           </h2>
           <h3 className="contact-tagline">
             together!

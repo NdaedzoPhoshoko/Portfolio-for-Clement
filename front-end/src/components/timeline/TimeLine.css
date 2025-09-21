@@ -131,17 +131,242 @@
   }
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .timeline-container {
+    width: 95%;
+    padding: 1.5rem;
+  }
+  
+  .career-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .timeline-title {
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .timeline-container {
+    width: 94%;
+    padding: 1.25rem;
+  }
+  
+  .material-timeline .MuiTimelineOppositeContent-root {
+    flex: 0 0 120px !important;
+    padding-right: 8px !important;
+  }
+  
+  .material-timeline .MuiTimelineContent-root {
+    padding-left: 8px !important;
+  }
+  
+  .content-box {
+    padding: 0.9rem;
+  }
+  
+  .timeline-title {
+    font-size: 0.9rem !important;
+    line-height: 1.3 !important;
+  }
+  
+  .timeline-location {
+    font-size: 0.8rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .timeline-container {
+    width: 92%;
     padding: 1rem;
+    margin: 0 auto;
+  }
+  
+  .career-title {
+    font-size: 1.3rem !important;
+    margin-bottom: 1.25rem !important;
+    text-align: center;
   }
   
   .material-timeline {
     padding: 0 !important;
   }
   
+  .material-timeline .MuiTimelineItem-root {
+    margin-bottom: 1rem !important;
+  }
+  
+  .material-timeline .MuiTimelineOppositeContent-root {
+    flex: 0 0 100px !important;
+    padding-right: 4px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .material-timeline .MuiTimelineContent-root {
+    padding-left: 4px !important;
+  }
+  
+  .material-timeline .MuiTimelineDot-root {
+    width: 32px !important;
+    height: 32px !important;
+    margin: 0 !important;
+  }
+  
+  .material-timeline .MuiTimelineDot-root.current-dot {
+    margin-left: 0 !important;
+  }
+  
+  .material-timeline .MuiTimelineConnector-root {
+    margin-left: 15px !important;
+  }
+  
   .content-box {
-    padding: 0.8rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+  }
+  
+  .timeline-title {
+    font-size: 0.85rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  .timeline-location {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.4rem !important;
+  }
+  
+  .achievement-chip,
+  .status-chip {
+    font-size: 0.7rem !important;
+    height: 24px !important;
+    margin-top: 0.4rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-container {
+    width: 90%;
+    padding: 0.75rem;
+  }
+  
+  .career-title {
+    font-size: 1.2rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .material-timeline .MuiTimelineOppositeContent-root {
+    flex: 0 0 80px !important;
+    padding-right: 2px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  .material-timeline .MuiTimelineContent-root {
+    padding-left: 2px !important;
+  }
+  
+  .material-timeline .MuiTimelineDot-root {
+    width: 28px !important;
+    height: 28px !important;
+  }
+  
+  .material-timeline .MuiTimelineConnector-root {
+    margin-left: 13px !important;
+  }
+  
+  .content-box {
+    padding: 0.6rem;
+    margin: 0.4rem 0;
+  }
+  
+  .timeline-title {
+    font-size: 0.8rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .timeline-location {
+    font-size: 0.7rem !important;
+  }
+  
+  .achievement-chip,
+  .status-chip {
+    font-size: 0.65rem !important;
+    height: 22px !important;
+    padding: 0 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-container {
+    width: 88%;
+    padding: 0.5rem;
+  }
+  
+  .career-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .material-timeline .MuiTimelineOppositeContent-root {
+    flex: 0 0 70px !important;
+    padding-right: 1px !important;
+    font-size: 0.65rem !important;
+  }
+  
+  .material-timeline .MuiTimelineContent-root {
+    padding-left: 1px !important;
+  }
+  
+  .material-timeline .MuiTimelineDot-root {
+    width: 24px !important;
+    height: 24px !important;
+  }
+  
+  .material-timeline .MuiTimelineConnector-root {
+    margin-left: 11px !important;
+  }
+  
+  .content-box {
+    padding: 0.5rem;
+    margin: 0.3rem 0;
+  }
+  
+  .timeline-title {
+    font-size: 0.75rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .timeline-location {
+    font-size: 0.65rem !important;
+  }
+  
+  .achievement-chip,
+  .status-chip {
+    font-size: 0.6rem !important;
+    height: 20px !important;
+    padding: 0 4px !important;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .timeline-container {
+    width: 95%;
+    padding: 0.75rem;
+  }
+  
+  .career-title {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .material-timeline .MuiTimelineItem-root {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .content-box {
+    padding: 0.6rem;
   }
 }

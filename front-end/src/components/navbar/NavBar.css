@@ -193,3 +193,253 @@
   color: #f5f1eeec;
 }
 
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+  display: none;
+  background: rgba(26, 26, 26, 0.9);
+  border: 1px solid #333;
+  color: #ccc;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 8px;
+  z-index: 1002;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-menu-toggle:hover {
+  color: #4ecdc4;
+  background: rgba(26, 26, 26, 1);
+  border-color: #4ecdc4;
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 1001;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  animation: fadeInOverlay 0.3s ease-out;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.mobile-sidebar-content {
+  background: #1a1a1a;
+  width: 280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: slideInLeft 0.3s ease-out;
+  border-right: 1px solid #333;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Profile Section */
+.mobile-profile-section {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mobile-profile-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #4ecdc4;
+  flex-shrink: 0;
+}
+
+.mobile-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mobile-profile-info h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.mobile-profile-info p {
+  color: #888;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Navigation Menu */
+.mobile-nav-menu {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.mobile-nav-item {
+  margin-bottom: 0.5rem;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: #ccc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.mobile-nav-link:hover {
+  background: #2a2a2a;
+  color: #ffffff;
+  border-left-color: #4ecdc4;
+}
+
+.mobile-nav-link svg {
+  width: 18px;
+  height: 18px;
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover svg {
+  color: #4ecdc4;
+}
+
+.mobile-nav-submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #222;
+  border-left: 3px solid #4ecdc4;
+}
+
+.mobile-nav-submenu li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1.5rem 0.6rem 3rem;
+  color: #aaa;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.mobile-nav-submenu li:hover {
+  background: #2a2a2a;
+  color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .page-icon {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .navbar-right {
+    gap: 30px;
+    margin-right: 2rem;
+  }
+  
+  .blog-mega-menu-placeholder {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+  
+  .navbar-right {
+    display: none;
+  }
+  
+  .page-icon {
+    width: 150px;
+    height: 150px;
+    top: -15px;
+  }
+  
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-icon {
+    width: 120px;
+    height: 120px;
+    top: -10px;
+  }
+  
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .mobile-sidebar-content {
+    width: 260px;
+  }
+  
+  .mobile-profile-section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .mobile-profile-info h3 {
+    font-size: 1rem;
+  }
+  
+  .mobile-profile-info p {
+    font-size: 0.8rem;
+  }
+  
+  .mobile-nav-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-nav-submenu li {
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    font-size: 0.85rem;
+  }
+}
+
