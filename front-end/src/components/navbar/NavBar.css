@@ -369,10 +369,143 @@
 }
 
 /* Responsive Design */
+/* Large Screen Responsiveness */
+@media (min-width: 1440px) {
+  .page-icon {
+    width: 280px;
+    height: 280px;
+    top: -25px;
+  }
+  
+  .navbar {
+    padding: 1.25rem 3rem;
+  }
+  
+  .navbar-right {
+    gap: 50px;
+    margin-right: 4rem;
+  }
+  
+  .navbar-right li a {
+    font-size: 1.05rem;
+  }
+  
+  .blog-mega-menu-placeholder {
+    min-width: 350px;
+    padding: 1rem;
+  }
+  
+  .mega-menu-text h4 {
+    font-size: 1.1rem;
+  }
+  
+  .mega-menu-text p {
+    font-size: 0.9rem;
+  }
+  
+  .mega-menu-icon {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .page-icon {
+    width: 320px;
+    height: 320px;
+    top: -30px;
+  }
+  
+  .navbar {
+    padding: 1.5rem 4rem;
+  }
+  
+  .navbar-right {
+    gap: 60px;
+    margin-right: 5rem;
+  }
+  
+  .navbar-right li a {
+    font-size: 1.15rem;
+  }
+  
+  .blog-mega-menu-placeholder {
+    min-width: 400px;
+    padding: 1.2rem;
+  }
+  
+  .mega-menu-text h4 {
+    font-size: 1.2rem;
+  }
+  
+  .mega-menu-text p {
+    font-size: 0.95rem;
+  }
+  
+  .mega-menu-icon {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 2560px) {
+  .page-icon {
+    width: 380px;
+    height: 380px;
+    top: -35px;
+  }
+  
+  .navbar {
+    padding: 2rem 6rem;
+  }
+  
+  .navbar-right {
+    gap: 80px;
+    margin-right: 6rem;
+  }
+  
+  .navbar-right li a {
+    font-size: 1.3rem;
+  }
+  
+  .blog-mega-menu-placeholder {
+    min-width: 480px;
+    padding: 1.5rem;
+  }
+  
+  .mega-menu-text h4 {
+    font-size: 1.4rem;
+  }
+  
+  .mega-menu-text p {
+    font-size: 1.1rem;
+  }
+  
+  .mega-menu-icon {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .page-icon {
+    width: 220px;
+    height: 220px;
+    top: -22px;
+  }
+  
+  .navbar-right {
+    gap: 35px;
+    margin-right: 2.5rem;
+  }
+  
+  .blog-mega-menu-placeholder {
+    min-width: 290px;
+  }
+}
+
 @media (max-width: 1024px) {
   .page-icon {
     width: 200px;
     height: 200px;
+    top: -20px;
   }
   
   .navbar-right {
@@ -382,6 +515,27 @@
   
   .blog-mega-menu-placeholder {
     min-width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .page-icon {
+    width: 180px;
+    height: 180px;
+    top: -18px;
+  }
+  
+  .navbar {
+    padding: 1rem 1.75rem;
+  }
+  
+  .navbar-right {
+    gap: 25px;
+    margin-right: 1.75rem;
+  }
+  
+  .navbar-right li a {
+    font-size: 0.95rem;
   }
 }
 
@@ -402,6 +556,22 @@
   
   .navbar {
     padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-icon {
+    width: 135px;
+    height: 135px;
+    top: -13px;
+  }
+  
+  .navbar {
+    padding: 1rem 1.25rem;
+  }
+  
+  .mobile-sidebar-content {
+    width: 270px;
   }
 }
 

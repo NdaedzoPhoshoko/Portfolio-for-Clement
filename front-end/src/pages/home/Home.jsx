@@ -55,9 +55,16 @@ const Home = () => {
     <div className="home-container">
       <div className="top-container">
         <div className="top-left-container">
-          <p className="greeting-intro">Hi, my name is</p>
-          <h1 className="greeting-name">Clement Phoshoko.</h1>
-          <h2 className="greeting-tagline">I build tech things.</h2>
+          {/* Default greeting for larger screens */}
+          <p className="greeting-intro greeting-default">Hi, my name is</p>
+          <h1 className="greeting-name greeting-default">Clement Phoshoko.</h1>
+          <h2 className="greeting-tagline greeting-default">I build tech things.</h2>
+          
+          {/* Alternative greeting for small screens (768px and below) */}
+          <p className="mobile-greeting-intro">Hi, my name is</p>
+          <h1 className="mobile-greeting-name">Clement Phoshoko.</h1>
+          <h2 className="mobile-greeting-tagline">I build tech things.</h2>
+          
           <p className="greeting-description">
             I'm a full-stack developer who gets way too excited about clean code, efficient algorithms, and elegant data structures. Currently obsessing over building scalable applications with proper error handling, comprehensive testing, and documentation that actually makes sense.
           </p>
