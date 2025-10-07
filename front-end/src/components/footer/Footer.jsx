@@ -39,7 +39,7 @@ const Footer = () => {
               {/* <a href="#" className="social-link">
                 <FontAwesomeIcon icon={faTwitter} />
               </a> */}
-              <a href="#" className="social-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@emkidncp" className="social-link" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faYoutube} />
               </a>
             </div>
