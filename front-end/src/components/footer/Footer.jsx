@@ -49,40 +49,40 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-title">Solutions</h3>
             <ul className="footer-links">
-              <li><a href="#">Full Stack Dev</a></li>
-              <li><a href="#">DevOps</a></li>
-              <li><a href="#">Oracle Cloud</a></li>
-              <li><a href="#">API</a></li>
+              <li><span className="footer-link">Full Stack Dev</span></li>
+              <li><span className="footer-link">DevOps</span></li>
+              <li><span className="footer-link">Oracle Cloud</span></li>
+              <li><span className="footer-link">API</span></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h3 className="footer-title">Platforms</h3>
             <ul className="footer-links">
-              <li><a href="#">AWS</a></li>
-              <li><a href="#">Docker</a></li>
-              <li><a href="#">Oracle</a></li>
-              <li><a href="#">Swagger Docs</a></li>
+              <li><span className="footer-link">AWS</span></li>
+              <li><span className="footer-link">Docker</span></li>
+              <li><span className="footer-link">Oracle</span></li>
+              <li><span className="footer-link">Swagger Docs</span></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h3 className="footer-title">Tools</h3>
             <ul className="footer-links">
-              <li><a href="#">Jira</a></li>
-              <li><a href="#">Huawei Cloud, GitHub</a></li>
-              <li><a href="#">Postman</a></li>
-              <li><a href="#">VS Code</a></li>
+              <li><span className="footer-link">Jira</span></li>
+              <li><span className="footer-link">Huawei Cloud, GitHub</span></li>
+              <li><span className="footer-link">Postman</span></li>
+              <li><span className="footer-link">VS Code</span></li>
             </ul>
           </div>
 
           <div className="footer-column">
             <h3 className="footer-title">Me</h3>
             <ul className="footer-links">
-              <li><a href="#">About Me</a></li>
-              <li><a href="#">Contact Me</a></li>
-              <li><a href="#">My Resume</a></li>
-              <li><a href="#">My Projects</a></li>
+              <li><span className="footer-link">About Me</span></li>
+              <li><span className="footer-link">Contact Me</span></li>
+              <li><span className="footer-link">My Resume</span></li>
+              <li><span className="footer-link">My Projects</span></li>
             </ul>
           </div>
 
@@ -111,11 +111,11 @@ const Footer = () => {
             Copyright © {new Date().getFullYear()} Ndaedzo Clement Phoshoko
           </div>
           <div className="legal-links">
-            <a href="#">Privacy Policy</a>
+            <span className="legal-link">Privacy Policy</span>
             <span className="separator">|</span>
-            <a href="#">Terms & Conditions</a>
+            <span className="legal-link">Terms & Conditions</span>
             <span className="separator">|</span>
-            <a href="#">FAQs</a>
+            <span className="legal-link">FAQs</span>
           </div>
         </div>
       </div>

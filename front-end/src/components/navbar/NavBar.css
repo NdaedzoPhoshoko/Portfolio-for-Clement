@@ -35,15 +35,37 @@
 .page-icon {
   width: 250px; /* Increased size */
   height: 250px; /* Increased size */
-  background-color: #ffffffe6; /* Placeholder color */
+  background: rgba(255, 255, 255, 0.05); /* Subtle glassmorphism background */
+  backdrop-filter: blur(20px); /* Strong blur for glassmorphism */
   border-radius: 50%; /* Make it circular */
   position: absolute; /* Relative to .navbar-left */
   top: -20px; /* Move above the navbar-left's top edge */
   left: 0; /* Align with the left edge */
   z-index: 1001; /* Ensure it's on top of everything */
-  border: none;
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Add a glow effect */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border for glassmorphism */
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2); /* Glassmorphism shadow */
   overflow: hidden; /* Clip contents to the circle */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: floatGently 6s ease-in-out infinite;
+}
+
+.page-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+@keyframes floatGently {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .page-icon-img {
@@ -55,6 +77,25 @@
   transform: translate(-50%, -50%); /* Center it */
   border-radius: 50%; /* Ensure the image itself is circular */
   object-fit: cover; /* Fill and crop as needed maintaining aspect ratio */
+  opacity: 0.7; /* Dimmed appearance */
+  filter: blur(0.5px) brightness(0.8) contrast(1.1); /* Subtle blur and dimming */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+.page-icon:hover .page-icon-img {
+  opacity: 0.85;
+  filter: blur(0px) brightness(0.9) contrast(1.2);
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+@keyframes subtlePulse {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.75;
+  }
 }
 
 .navbar-right {
