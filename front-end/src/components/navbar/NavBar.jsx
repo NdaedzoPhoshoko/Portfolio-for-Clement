@@ -203,7 +203,7 @@ const Navbar = () => {
         <Link to="/contact">Contact Me</Link>
         {showContactMegaMenu && (
           <div className="contact-mega-menu-placeholder blog-mega-menu-placeholder">
-            <div className="mega-menu-item" onClick={() => navigate('/contact')}>
+            <div className="mega-menu-item" onClick={() => navigate('/contact')} style={{ cursor: 'pointer' }}>
               <div className="mega-menu-icon">
                 <FontAwesomeIcon icon={faEnvelope} className="icon-email-me" /> {/* Icon for Email Me */}
               </div>
