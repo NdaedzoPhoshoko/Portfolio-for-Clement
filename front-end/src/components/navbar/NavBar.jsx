@@ -129,7 +129,7 @@ const Navbar = () => {
           onMouseLeave={() => setShowAboutMegaMenu(false)} // Hide on mouse leave
           style={{ position: "relative" }} // Needed for positioning the mega menu
         >
-        <Link>About Me</Link>
+        <Link to='/journey'>About Me</Link>
         {showAboutMegaMenu && (
           <div className="about-mega-menu-placeholder blog-mega-menu-placeholder">
             <div className="mega-menu-item" onClick={() => navigate('/journey')} style={{ cursor: 'pointer' }}>
@@ -169,7 +169,7 @@ const Navbar = () => {
         onMouseLeave={() => setShowBlogMegaMenu(false)}
         style={{ position: "relative" }}
       >
-        <Link>Blog World</Link>
+        <Link to='/blog'>Blog World</Link>
         {showBlogMegaMenu && (
           <div className="blog-mega-menu-placeholder">
             <div className="mega-menu-item" onClick={() => navigate('/blog')} style={{ cursor: 'pointer' }}>
