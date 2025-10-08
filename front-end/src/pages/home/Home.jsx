@@ -98,7 +98,7 @@ const Home = () => {
       </div>
               <div className="main-container">
           <div className="services-section">
-            <h2 className="services-title">Why, Hire Clement?</h2>
+            <h2 className="services-title">Why, work with Clement?</h2>
             <div className="services-grid">
               <div className="service-card">
                 <h3 className="service-card-title">Responsive Sites</h3>

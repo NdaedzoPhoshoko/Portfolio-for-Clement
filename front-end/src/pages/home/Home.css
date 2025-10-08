@@ -84,7 +84,7 @@
   animation: smoothSlideIn 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0s both;
   will-change: transform, opacity;
   --stagger-delay: 0.06s;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   border-radius: 12px;
   position: relative;
 }
@@ -144,7 +144,7 @@
   padding-right: 4rem;
   transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
   transition: transform 0.3s ease;
-  animation: slideInFromLeft 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
+  animation: slideInFromLeft 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s both;
 }
 
 @keyframes slideInFromLeft {
@@ -187,8 +187,7 @@
   .main-container {
     padding: 5rem 8rem;
     gap: 2.75rem;
-    max-width: 1700px;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
@@ -290,6 +289,7 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateZ(0);
   backface-visibility: hidden;
+  white-space: nowrap;
 }
 
 .greeting-name:hover {
@@ -317,6 +317,7 @@
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateZ(0);
   backface-visibility: hidden;
+  white-space: nowrap;
 }
 
 .greeting-tagline:hover {
@@ -1656,12 +1657,12 @@
   }
   
   .greeting-name {
-    font-size: 3.2rem;
+    font-size: 3.04rem;
     line-height: 1.1;
   }
   
   .greeting-tagline {
-    font-size: 3.2rem;
+    font-size: 3.04rem;
     line-height: 1.1;
   }
   
@@ -1669,6 +1670,7 @@
     font-size: 1.15rem;
     line-height: 1.6;
     max-width: 500px;
+    margin-bottom: 2rem;
   }
   
   .main-container {
@@ -1685,12 +1687,12 @@
   }
   
   .greeting-name {
-    font-size: 3.4rem;
+    font-size: 3.23rem;
     line-height: 1.1;
   }
   
   .greeting-tagline {
-    font-size: 3.4rem;
+    font-size: 3.23rem;
     line-height: 1.1;
   }
   
@@ -1698,6 +1700,7 @@
     font-size: 1.18rem;
     line-height: 1.6;
     max-width: 520px;
+    margin-bottom: 2rem;
   }
   
   .main-container {
@@ -1714,12 +1717,12 @@
   }
   
   .greeting-name {
-    font-size: 3.6rem;
+    font-size: 3.42rem;
     line-height: 1.1;
   }
   
   .greeting-tagline {
-    font-size: 3.6rem;
+    font-size: 3.42rem;
     line-height: 1.1;
   }
   
@@ -1727,6 +1730,7 @@
     font-size: 1.2rem;
     line-height: 1.6;
     max-width: 540px;
+    margin-bottom: 4rem;
   }
   
   .main-container {
@@ -1743,12 +1747,12 @@
   }
   
   .greeting-name {
-    font-size: 4rem;
+    font-size: 3.8rem;
     line-height: 1.1;
   }
   
   .greeting-tagline {
-    font-size: 4rem;
+    font-size: 3.8rem;
     line-height: 1.1;
   }
   
@@ -1756,11 +1760,13 @@
     font-size: 1.3rem;
     line-height: 1.65;
     max-width: 600px;
+    margin-bottom: 4rem;
   }
   
   .main-container {
     padding: 4rem 3rem;
     gap: 2rem;
+    width: 100%;
   }
 }
 
@@ -1773,12 +1779,12 @@
   }
   
   .greeting-name {
-    font-size: 4.5rem;
+    font-size: 4.275rem;
     line-height: 1.1;
   }
   
   .greeting-tagline {
-    font-size: 4.5rem;
+    font-size: 4.275rem;
     line-height: 1.1;
   }
   
@@ -1786,13 +1792,13 @@
     font-size: 1.4rem;
     line-height: 1.7;
     max-width: 700px;
+    margin-bottom: 4rem;
   }
   
   .main-container {
     padding: 5rem 4rem;
     gap: 2.5rem;
-    max-width: 1600px;
-    margin: 0 auto;
+    width: 100%;
   }
 }
 
