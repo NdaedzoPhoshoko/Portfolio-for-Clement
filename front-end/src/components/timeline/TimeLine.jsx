@@ -38,59 +38,93 @@ const TimeLine = () => {
   ];
 
   return (
-    <div className="timeline-container">
-      <Typography variant="h5" className="career-title">
-        Career Summary
-      </Typography>
-      <Timeline position="alternate" className="material-timeline">
-        {timelineData.map((item, index) => (
-          <TimelineItem key={index}>
-            <TimelineOppositeContent className="timeline-date">
-              <Typography variant="body2" color="textSecondary">
-                {item.date}
-              </Typography>
-            </TimelineOppositeContent>
-            
-            <TimelineSeparator>
-              <TimelineDot 
-                color={item.status === 'completed' ? 'success' : 'primary'}
-                className={item.status === 'current' ? 'current-dot' : ''}
-              >
-                {item.icon}
-              </TimelineDot>
-              {index < timelineData.length - 1 && <TimelineConnector />}
-            </TimelineSeparator>
-            
-            <TimelineContent className="timeline-content">
-              <Box className="content-box">
-                <Typography variant="h6" component="span" className="timeline-title">
-                  {item.title}
+    <>
+      {/* Desktop Timeline - Hidden on mobile (768px and below) */}
+      <div className="timeline-container desktop-timeline">
+        <Typography variant="h5" className="career-title">
+          Career Summary
+        </Typography>
+        <Timeline position="alternate" className="material-timeline">
+          {timelineData.map((item, index) => (
+            <TimelineItem key={index}>
+              <TimelineOppositeContent className="timeline-date">
+                <Typography variant="body2" color="textSecondary">
+                  {item.date}
                 </Typography>
-                <Typography variant="body2" className="timeline-location">
-                  {item.location}
-                </Typography>
-                {item.achievement && (
-                  <Chip 
-                    label={item.achievement} 
-                    size="small" 
-                    className="achievement-chip"
-                    color="warning"
-                  />
-                )}
-                {item.status === 'current' && (
-                  <Chip 
-                    label="Currently Active" 
-                    size="small" 
-                    className="status-chip"
-                    color="success"
-                  />
-                )}
-              </Box>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </div>
+              </TimelineOppositeContent>
+              
+              <TimelineSeparator>
+                <TimelineDot 
+                  color={item.status === 'completed' ? 'success' : 'primary'}
+                  className={item.status === 'current' ? 'current-dot' : ''}
+                >
+                  {item.icon}
+                </TimelineDot>
+                {index < timelineData.length - 1 && <TimelineConnector />}
+              </TimelineSeparator>
+              
+              <TimelineContent className="timeline-content">
+                <Box className="content-box">
+                  <Typography variant="h6" component="span" className="timeline-title">
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body2" className="timeline-location">
+                    {item.location}
+                  </Typography>
+                  {item.achievement && (
+                    <Chip 
+                      label={item.achievement} 
+                      size="small" 
+                      className="achievement-chip"
+                      color="warning"
+                    />
+                  )}
+                  {item.status === 'current' && (
+                    <Chip 
+                      label="Currently Active" 
+                      size="small" 
+                      className="status-chip"
+                      color="success"
+                    />
+                  )}
+                </Box>
+              </TimelineContent>
+            </TimelineItem>
+          ))}
+        </Timeline>
+      </div>
+
+      {/* Mobile Timeline - Visible only on 768px and below */}
+      <div className="timeline-container mobile-timeline">
+        <h5 className="career-title-mobile">Career Summary</h5>
+        <div className="mobile-timeline-wrapper">
+          {timelineData.map((item, index) => (
+            <div key={index} className="mobile-timeline-item">
+              <div className="mobile-timeline-line">
+                <div className={`mobile-timeline-dot ${item.status === 'current' ? 'current' : 'completed'}`}>
+                  {item.icon}
+                </div>
+                {index < timelineData.length - 1 && <div className="mobile-connector"></div>}
+              </div>
+              
+              <div className="mobile-timeline-content">
+                <div className="mobile-date">{item.date}</div>
+                <div className="mobile-content-box">
+                  <h6 className="mobile-timeline-title">{item.title}</h6>
+                  <p className="mobile-timeline-location">{item.location}</p>
+                  {item.achievement && (
+                    <span className="mobile-achievement-chip">{item.achievement}</span>
+                  )}
+                  {item.status === 'current' && (
+                    <span className="mobile-status-chip">Currently Active</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 };
 

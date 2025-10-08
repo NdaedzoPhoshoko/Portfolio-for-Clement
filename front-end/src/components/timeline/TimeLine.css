@@ -131,6 +131,16 @@
   }
 }
 
+/* Hide mobile timeline on desktop */
+.mobile-timeline {
+  display: none;
+}
+
+/* Show desktop timeline by default */
+.desktop-timeline {
+  display: block;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .timeline-container {
@@ -178,195 +188,293 @@
 }
 
 @media (max-width: 768px) {
-  .timeline-container {
-    width: 92%;
-    padding: 1rem;
+  /* Hide desktop timeline */
+  .desktop-timeline {
+    display: none !important;
+  }
+  
+  /* Show mobile timeline */
+  .mobile-timeline {
+    display: block !important;
+    width: 95%;
+    padding: 1.5rem 1rem;
     margin: 0 auto;
   }
   
-  .career-title {
-    font-size: 1.3rem !important;
-    margin-bottom: 1.25rem !important;
+  .career-title-mobile {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
     text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   }
   
-  .material-timeline {
-    padding: 0 !important;
+  .mobile-timeline-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
   
-  .material-timeline .MuiTimelineItem-root {
-    margin-bottom: 1rem !important;
+  .mobile-timeline-item {
+    display: flex;
+    gap: 1rem;
+    position: relative;
   }
   
-  .material-timeline .MuiTimelineOppositeContent-root {
-    flex: 0 0 100px !important;
-    padding-right: 4px !important;
-    font-size: 0.75rem !important;
+  .mobile-timeline-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
   }
   
-  .material-timeline .MuiTimelineContent-root {
-    padding-left: 4px !important;
+  .mobile-timeline-dot {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
   
-  .material-timeline .MuiTimelineDot-root {
-    width: 32px !important;
-    height: 32px !important;
-    margin: 0 !important;
+  .mobile-timeline-dot.completed {
+    background-color: #4CAF50;
+    border: 3px solid #4CAF50;
   }
   
-  .material-timeline .MuiTimelineDot-root.current-dot {
-    margin-left: 0 !important;
+  .mobile-timeline-dot.current {
+    background-color: #2196F3;
+    border: 3px solid #2196F3;
+    animation: mobilePulse 2s infinite;
   }
   
-  .material-timeline .MuiTimelineConnector-root {
-    margin-left: 15px !important;
+  .mobile-timeline-dot svg {
+    font-size: 1.2rem;
   }
   
-  .content-box {
-    padding: 0.75rem;
-    margin: 0.5rem 0;
+  .mobile-connector {
+    width: 3px;
+    flex: 1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.2) 100%);
+    min-height: 40px;
+    margin: 4px 0;
   }
   
-  .timeline-title {
-    font-size: 0.85rem !important;
-    line-height: 1.2 !important;
-    margin-bottom: 0.4rem !important;
+  .mobile-timeline-content {
+    flex: 1;
+    padding-bottom: 1.5rem;
   }
   
-  .timeline-location {
-    font-size: 0.75rem !important;
-    margin-bottom: 0.4rem !important;
+  .mobile-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.75rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
   }
   
-  .achievement-chip,
-  .status-chip {
-    font-size: 0.7rem !important;
-    height: 24px !important;
-    margin-top: 0.4rem !important;
+  .mobile-content-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .mobile-content-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mobile-timeline-title {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+  }
+  
+  .mobile-timeline-location {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.8rem;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .mobile-achievement-chip,
+  .mobile-status-chip {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .mobile-achievement-chip {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #1d1111;
+    border-left: 4px solid rgba(235, 235, 12, 0.819);
+  }
+  
+  .mobile-status-chip {
+    background-color: #4CAF50;
+    color: white;
+    border-left: 4px solid rgba(255, 255, 255, 0.819);
+  }
+  
+  @keyframes mobilePulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(33, 150, 243, 0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 2px 8px rgba(33, 150, 243, 0.4);
+    }
   }
 }
 
 @media (max-width: 600px) {
-  .timeline-container {
-    width: 90%;
-    padding: 0.75rem;
+  .mobile-timeline {
+    width: 92%;
+    padding: 1.25rem 0.75rem;
   }
   
-  .career-title {
-    font-size: 1.2rem !important;
-    margin-bottom: 1rem !important;
+  .career-title-mobile {
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
   }
   
-  .material-timeline .MuiTimelineOppositeContent-root {
-    flex: 0 0 80px !important;
-    padding-right: 2px !important;
-    font-size: 0.7rem !important;
+  .mobile-timeline-item {
+    gap: 0.8rem;
   }
   
-  .material-timeline .MuiTimelineContent-root {
-    padding-left: 2px !important;
+  .mobile-timeline-dot {
+    width: 36px;
+    height: 36px;
   }
   
-  .material-timeline .MuiTimelineDot-root {
-    width: 28px !important;
-    height: 28px !important;
+  .mobile-timeline-dot svg {
+    font-size: 1rem;
   }
   
-  .material-timeline .MuiTimelineConnector-root {
-    margin-left: 13px !important;
+  .mobile-connector {
+    min-height: 35px;
   }
   
-  .content-box {
-    padding: 0.6rem;
-    margin: 0.4rem 0;
+  .mobile-date {
+    font-size: 0.7rem;
   }
   
-  .timeline-title {
-    font-size: 0.8rem !important;
-    line-height: 1.1 !important;
+  .mobile-content-box {
+    padding: 0.85rem;
   }
   
-  .timeline-location {
-    font-size: 0.7rem !important;
+  .mobile-timeline-title {
+    font-size: 0.85rem;
   }
   
-  .achievement-chip,
-  .status-chip {
-    font-size: 0.65rem !important;
-    height: 22px !important;
-    padding: 0 6px !important;
+  .mobile-timeline-location {
+    font-size: 0.75rem;
+  }
+  
+  .mobile-achievement-chip,
+  .mobile-status-chip {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
   }
 }
 
 @media (max-width: 480px) {
-  .timeline-container {
-    width: 88%;
-    padding: 0.5rem;
+  .mobile-timeline {
+    width: 90%;
+    padding: 1rem 0.5rem;
   }
   
-  .career-title {
-    font-size: 1.1rem !important;
-    margin-bottom: 0.75rem !important;
+  .career-title-mobile {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
   }
   
-  .material-timeline .MuiTimelineOppositeContent-root {
-    flex: 0 0 70px !important;
-    padding-right: 1px !important;
-    font-size: 0.65rem !important;
+  .mobile-timeline-item {
+    gap: 0.6rem;
   }
   
-  .material-timeline .MuiTimelineContent-root {
-    padding-left: 1px !important;
+  .mobile-timeline-dot {
+    width: 32px;
+    height: 32px;
   }
   
-  .material-timeline .MuiTimelineDot-root {
-    width: 24px !important;
-    height: 24px !important;
+  .mobile-timeline-dot svg {
+    font-size: 0.9rem;
   }
   
-  .material-timeline .MuiTimelineConnector-root {
-    margin-left: 11px !important;
+  .mobile-connector {
+    min-height: 30px;
+    width: 2px;
   }
   
-  .content-box {
-    padding: 0.5rem;
-    margin: 0.3rem 0;
+  .mobile-timeline-content {
+    padding-bottom: 1.25rem;
   }
   
-  .timeline-title {
-    font-size: 0.75rem !important;
-    line-height: 1.1 !important;
+  .mobile-date {
+    font-size: 0.65rem;
+    margin-bottom: 0.4rem;
   }
   
-  .timeline-location {
-    font-size: 0.65rem !important;
+  .mobile-content-box {
+    padding: 0.75rem;
   }
   
-  .achievement-chip,
-  .status-chip {
-    font-size: 0.6rem !important;
-    height: 20px !important;
-    padding: 0 4px !important;
+  .mobile-timeline-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .mobile-timeline-location {
+    font-size: 0.7rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .mobile-achievement-chip,
+  .mobile-status-chip {
+    font-size: 0.6rem;
+    padding: 0.18rem 0.45rem;
+    margin-top: 0.4rem;
   }
 }
 
 /* Landscape orientation adjustments for mobile */
 @media (max-width: 768px) and (orientation: landscape) {
-  .timeline-container {
-    width: 95%;
+  .mobile-timeline {
+    width: 96%;
+    padding: 1rem 0.75rem;
+  }
+  
+  .career-title-mobile {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .mobile-timeline-item {
+    gap: 0.75rem;
+  }
+  
+  .mobile-timeline-content {
+    padding-bottom: 1rem;
+  }
+  
+  .mobile-content-box {
     padding: 0.75rem;
-  }
-  
-  .career-title {
-    font-size: 1.1rem !important;
-    margin-bottom: 0.75rem !important;
-  }
-  
-  .material-timeline .MuiTimelineItem-root {
-    margin-bottom: 0.75rem !important;
-  }
-  
-  .content-box {
-    padding: 0.6rem;
   }
 }
