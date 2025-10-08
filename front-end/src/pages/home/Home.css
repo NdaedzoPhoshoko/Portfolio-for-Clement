@@ -313,6 +313,22 @@
   letter-spacing: -0.02em;
   animation: slideInSmooth 1.0s cubic-bezier(0.25, 0.9, 0.35, 1) calc(0.8s + var(--stagger-delay) * 2) both;
   text-align: left;
+  will-change: transform, opacity, filter;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.greeting-tagline:hover {
+  transform: scale(1.02) translateY(-2px);
+  text-shadow: 0 4px 20px rgba(204, 214, 246, 0.3);
+  letter-spacing: -0.01em;
+}
+
+.greeting-tagline:focus {
+  outline: 2px solid rgba(204, 214, 246, 0.5);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* Default greeting - shown on all screens except small */

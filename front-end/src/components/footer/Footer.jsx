@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -11,6 +12,13 @@ import {
 import './Footer.css';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <footer className="footer">
       {/* Top Footer Section */}
@@ -70,7 +78,8 @@ const Footer = () => {
             <h3 className="footer-title">Tools</h3>
             <ul className="footer-links">
               <li><span className="footer-link">Jira</span></li>
-              <li><span className="footer-link">Huawei Cloud, GitHub</span></li>
+              <li><span className="footer-link">Huawei Cloud</span></li>
+              <li><span className="footer-link">GitHub</span></li>
               <li><span className="footer-link">Postman</span></li>
               <li><span className="footer-link">VS Code</span></li>
             </ul>
@@ -79,10 +88,10 @@ const Footer = () => {
           <div className="footer-column">
             <h3 className="footer-title">Me</h3>
             <ul className="footer-links">
-              <li><span className="footer-link">About Me</span></li>
-              <li><span className="footer-link">Contact Me</span></li>
-              <li><span className="footer-link">My Resume</span></li>
-              <li><span className="footer-link">My Projects</span></li>
+              <li><span className="footer-link" onClick={() => handleNavigation('/journey')}>About Me</span></li>
+              <li><span className="footer-link" onClick={() => handleNavigation('/contact')}>Contact Me</span></li>
+              <li><span className="footer-link" onClick={() => handleNavigation('/resume')}>My Resume</span></li>
+              <li><span className="footer-link" onClick={() => handleNavigation('/blog')}>My Projects</span></li>
             </ul>
           </div>
 
