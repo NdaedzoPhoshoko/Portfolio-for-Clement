@@ -32,7 +32,7 @@
 .home-container {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(130deg, #3f4041 50%, #0e0e11 50%);
+  background: linear-gradient(130deg, #3f4041 50%, #0e0e1100 50%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -235,7 +235,7 @@
   left: 0;
   width: 100%;
   height: 200px;
-  background: linear-gradient(to top, #0d1117 0%, rgba(13, 17, 23, 0.8) 50%, transparent 100%);
+  background: linear-gradient(to top, #0d111700 0%, rgba(13, 17, 23, 0) 50%, transparent 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -1855,7 +1855,7 @@
 /* Dark mode optimizations */
 @media (prefers-color-scheme: dark) {
   .home-container {
-    background: linear-gradient(130deg, #2a2a2b 50%, #0a0a0d 50%);
+    background: linear-gradient(130deg, #2a2a2b 50%, #0a0a0d00 50%);
   }
 }
 

@@ -2,12 +2,12 @@
 .contact-container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(130deg, #3f4041 50%, #0e0e11 50%);
+  background: linear-gradient(130deg, #3f4041 50%, #0e0e1100 50%);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 2rem 2rem 2rem;
-  margin: 0 10%;
+  margin: 0 00%;
 }
 
 /* Left Section - Text */
@@ -126,6 +126,7 @@
 }
 
 .form-input {
+  width: 90%;
   background: none;
   border: none;
   border-bottom: 1px solid #8892b0;
@@ -145,6 +146,7 @@
 }
 
 .form-textarea {
+  width: 90%;
   background: none;
   border: none;
   border-bottom: 1px solid #8892b0;
@@ -204,6 +206,12 @@
   .contact-right-section {
     flex: none;
     padding: 2rem;
+    width: 90%;
+  }
+  
+  .contact-form-container {
+    max-width: 90%;
+    width: 90%;
   }
   
   .contact-main-title,
@@ -217,6 +225,12 @@
   .contact-left-section,
   .contact-right-section {
     padding: 1.5rem;
+    width: 90%;
+  }
+  
+  .contact-form-container {
+    max-width: 90%;
+    width: 90%;
   }
   
   .contact-main-title,
@@ -238,6 +252,12 @@
   .contact-left-section,
   .contact-right-section {
     padding: 1rem;
+    width: 100%;
+  }
+  
+  .contact-form-container {
+    max-width: 100%;
+    width: 100%;
   }
   
   .contact-main-title,
@@ -253,5 +273,52 @@
   .submit-button {
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .contact-container {
+    padding: 0.5rem;
+  }
+  
+  .contact-left-section,
+  .contact-right-section {
+    padding: 0.5rem;
+  }
+  
+  .contact-main-title,
+  .contact-highlight-word,
+  .contact-tagline {
+    font-size: 1.5rem;
+  }
+  
+  .contact-form-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .contact-form {
+    gap: 0.8rem;
+  }
+  
+  .form-label {
+    font-size: 0.85rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    font-size: 0.85rem;
+    padding: 0.4rem 0;
+  }
+  
+  .form-textarea {
+    min-height: 80px;
+  }
+  
+  .submit-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+    width: 100%;
+    text-align: center;
   }
 }
