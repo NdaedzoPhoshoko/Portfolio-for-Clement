@@ -41,7 +41,6 @@
   backdrop-filter: blur(20px);
   border-radius: 20px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   animation: fadeInUp 0.6s ease-out both;
@@ -57,7 +56,6 @@
 .achievement-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .achievement-image-container {
@@ -456,8 +454,14 @@
 }
 
 .leetcode-chevron:hover { background: rgba(0, 0, 0, 0.55); transform: translateY(-50%) scale(1.05); }
-.leetcode-chevron-left { left: -46px; }
-.leetcode-chevron-right { right: -46px; }
+.leetcode-chevron-left { 
+  left: -46px;
+  margin-left: 1rem;
+}
+.leetcode-chevron-right { 
+  right: -46px;
+  margin-right: 1rem;
+}
 
 /* Edge shadow alerts */
 .leetcode-edge-shadow {
@@ -485,10 +489,25 @@
   100% { opacity: 0; }
 }
 
+@media (min-width: 769px) and (max-width: 1026px) {
+  .leetcode-chevron-left { 
+    margin-left: 1rem !important;
+  }
+  .leetcode-chevron-right { 
+    margin-right: 1rem !important;
+  }
+}
+
 @media (max-width: 768px) {
   .leetcodes-wrapper { margin: 0 0 2rem 0; }
-  .leetcode-chevron-left { left: -8px; }
-  .leetcode-chevron-right { right: -8px; }
+  .leetcode-chevron-left { 
+    left: -8px;
+    margin-left: 1rem;
+  }
+  .leetcode-chevron-right { 
+    right: -8px;
+    margin-right: 1rem;
+  }
 }
 
 .certificate-place {
@@ -603,7 +622,9 @@
   .certificate-item:nth-child(1) .cert-icon,
   .certificate-item:nth-child(2) .cert-icon,
   .certificate-item:nth-child(3) .cert-icon {
-    margin-left: -22px;
+    margin-left: -19px;
+    width: 100px;
+    height: 75px;
   }
   
   .certificate-title {
