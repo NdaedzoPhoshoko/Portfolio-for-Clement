@@ -1,0 +1,141 @@
+/* Spinner Overlay */
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeOut 0.5s ease-out 2.5s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Spinner Content */
+.spinner-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hi Text - Large and Quick */
+.spinner-hi {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #ccd6f6;
+  margin: 0;
+  opacity: 0;
+  transform: scale(0.5);
+  animation: hiAnimation 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+}
+
+@keyframes hiAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.1) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Welcome Text - Appears After */
+.spinner-welcome {
+  font-size: 2.5rem;
+  font-weight: 400;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1, #64ffda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: welcomeAnimation 0.8s ease-out 0.5s forwards;
+}
+
+@keyframes welcomeAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulsing Dot Effect */
+.spinner-hi::after {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: linear-gradient(135deg, #4ecdc4, #64ffda);
+  border-radius: 50%;
+  margin-left: 0.3rem;
+  animation: pulse 1.5s ease-in-out 0.6s infinite;
+  vertical-align: middle;
+  box-shadow: 0 0 15px rgba(100, 255, 218, 0.6);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .spinner-hi {
+    font-size: 4rem;
+  }
+
+  .spinner-welcome {
+    font-size: 2rem;
+  }
+
+  .spinner-hi::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .spinner-hi {
+    font-size: 3rem;
+  }
+
+  .spinner-welcome {
+    font-size: 1.5rem;
+  }
+
+  .spinner-hi::after {
+    width: 8px;
+    height: 8px;
+  }
+}
+
