@@ -12,6 +12,7 @@ import Achievements from "./pages/about/achievement/Achievements";
 import Blog from "./pages/blog/Blog";
 // import Item from "./pages/blog/posts/item/Item";
 import ViewItem from "./pages/blog/posts/view_item/ViewItem";
+import Tutorials from "./pages/blog/tutorials/Tutorials";
 
 import Contact from "./pages/contact/Contact";
 
@@ -60,6 +61,7 @@ function AppContent() {
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/view/:id" element={<ViewItem />} />
+          <Route path="/tutorials" element={<Tutorials />} />
           <Route path="/hire" element={<HireMe />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

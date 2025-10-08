@@ -103,7 +103,7 @@ const Navbar = () => {
                   <li onClick={() => { navigate('/blog'); closeMobileMenu(); }}>
                     <span>Latest Posts</span>
                   </li>
-                  <li>
+                  <li onClick={() => { navigate('/tutorials'); closeMobileMenu(); }}>
                     <span>Tutorials</span>
                   </li>
                 </ul>
@@ -181,7 +181,7 @@ const Navbar = () => {
                 <p>Browse through my most recent blog entries covering industry insights, technical tutorials, personal reflections, and thought-provoking discussions about current trends in software development.</p>
               </div>
             </div>
-            <div className="mega-menu-item">
+            <div className="mega-menu-item" onClick={() => navigate('/tutorials')} style={{ cursor: 'pointer' }}>
               <div className="mega-menu-icon">
                 <FontAwesomeIcon icon={faBook} className="icon-tutorials" /> {/* Icon for Tutorials */}
               </div>
