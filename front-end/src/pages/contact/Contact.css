@@ -196,6 +196,74 @@
   transform: translateY(0);
 }
 
+.error-text {
+  min-height: 1em; /* enough space for one line of small text */
+  color: rgb(222, 117, 117);
+  font-size: 0.8rem;
+  margin-top: 4px;
+
+  /* Optional: only show text if there’s an error */
+  visibility: hidden;
+}
+
+.error-text:empty {
+  visibility: hidden;
+}
+
+.error-text:not(:empty) {
+  visibility: visible;
+}
+
+.success-modal {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(100, 255, 218, 0.1);
+  border: 1px solid rgba(100, 255, 218, 0.4);
+  color: #64ffda;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease forwards;
+  font-size: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+}
+
+.success-message {
+  margin: 0;
+}
+
+.error-modal {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(222, 117, 117, 0.1);
+  border: 1px solid rgba(222, 117, 117, 0.4);
+  color: rgb(222, 117, 117);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s ease forwards;
+  font-size: 1rem;
+  backdrop-filter: blur(12px);
+}
+
+.error-message {
+  margin: 0;
+}
+
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .contact-container {
