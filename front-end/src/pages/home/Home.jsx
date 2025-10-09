@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
 import laptopImage from '../../assets/images/danieljoshualaptop.jpg';
+import SubscribeModal from '../../components/subscribe/SubscribeModal';
 
 // Import SVG icons
 import assemblyIcon from '../../assets/language_icons/assembly-svgrepo-com.svg';
@@ -53,6 +54,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <SubscribeModal />
       <div className="top-container">
         <div className="top-left-container">
           {/* Default greeting for larger screens */}
