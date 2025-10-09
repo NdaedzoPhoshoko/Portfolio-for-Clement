@@ -1,0 +1,149 @@
+.notfound-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #0d1117;
+}
+
+.notfound-content {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.notfound-illustration {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 1rem;
+}
+
+.notfound-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(108, 99, 255, 0.2));
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.notfound-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.notfound-title {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #6c63ff;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(108, 99, 255, 0.5);
+}
+
+.notfound-subtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.notfound-description {
+  font-size: 1.1rem;
+  color: #89929b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.notfound-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: none;
+  color: #6c63ff;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.notfound-button:hover {
+  color: #5a52d5;
+  transform: translateY(-2px);
+}
+
+.notfound-button:active {
+  transform: translateY(0);
+}
+
+.notfound-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.notfound-button:hover .notfound-icon {
+  transform: translateX(-4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notfound-container {
+    padding: 1rem;
+  }
+
+  .notfound-illustration {
+    max-width: 220px;
+  }
+
+  .notfound-title {
+    font-size: 3rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .notfound-description {
+    font-size: 1rem;
+  }
+
+  .notfound-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-illustration {
+    max-width: 180px;
+  }
+
+  .notfound-title {
+    font-size: 2.5rem;
+  }
+
+  .notfound-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .notfound-description {
+    font-size: 0.95rem;
+  }
+}
+
