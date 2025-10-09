@@ -1,59 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
   <url>
     <loc>https://onclement.vercel.app/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- About Me - Journey -->
   <url>
     <loc>https://onclement.vercel.app/journey</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Achievements -->
   <url>
     <loc>https://onclement.vercel.app/achievements</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Resume -->
   <url>
     <loc>https://onclement.vercel.app/resume</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Blog -->
   <url>
     <loc>https://onclement.vercel.app/blog</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Tutorials -->
   <url>
     <loc>https://onclement.vercel.app/tutorials</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Contact -->
   <url>
     <loc>https://onclement.vercel.app/contact</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
-
