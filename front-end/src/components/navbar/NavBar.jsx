@@ -16,9 +16,9 @@ import {
 import { faGithub, faLinkedin, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 import './NavBar.css'
-import profileImage from "./../../../src/assets/images/author-profile.jpg";
 
 const Navbar = () => {
+  const profileImage = "/assets/images/author-profile.jpg";
   const navigate = useNavigate();
   const location = useLocation();
   const [showBlogMegaMenu, setShowBlogMegaMenu] = useState(false); // State for blog mega menu visibility
