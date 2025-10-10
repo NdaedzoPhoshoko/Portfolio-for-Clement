@@ -1,0 +1,153 @@
+.websitedown-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #0d1117;
+}
+
+.websitedown-content {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.websitedown-illustration {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+}
+
+.websitedown-image {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 30px rgba(78, 205, 196, 0.3));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}
+
+.websitedown-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.websitedown-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.websitedown-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.websitedown-description {
+  font-size: 1.1rem;
+  color: #89929b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.websitedown-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: none;
+  color: #4ecdc4;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.websitedown-button:hover {
+  color: #45b7d1;
+  transform: translateY(-2px);
+}
+
+.websitedown-button:active {
+  transform: translateY(0);
+}
+
+.websitedown-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.websitedown-button:hover .websitedown-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .websitedown-container {
+    padding: 1rem;
+  }
+
+  .websitedown-illustration {
+    max-width: 300px;
+  }
+
+  .websitedown-title {
+    font-size: 2rem;
+  }
+
+  .websitedown-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .websitedown-description {
+    font-size: 1rem;
+  }
+
+  .websitedown-button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .websitedown-illustration {
+    max-width: 250px;
+  }
+
+  .websitedown-title {
+    font-size: 1.75rem;
+  }
+
+  .websitedown-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .websitedown-description {
+    font-size: 0.95rem;
+  }
+}
+

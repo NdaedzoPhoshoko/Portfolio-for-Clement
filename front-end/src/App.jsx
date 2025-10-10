@@ -1,6 +1,8 @@
 import "./App.css";
 import Navbar from "./components/navbar/NavBar";
 import Footer from "./components/footer/Footer";
+import NotFound from "./components/notFound/NotFound";
+import WebsiteDown from "./components/websiteDown/WebsiteDown";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -15,6 +17,9 @@ import ViewItem from "./pages/blog/posts/view_item/ViewItem";
 import Tutorials from "./pages/blog/tutorials/Tutorials";
 
 import Contact from "./pages/contact/Contact";
+
+// Maintenance mode flag - set to true when site is under maintenance
+const MAINTENANCE_MODE = false;
 
 // Placeholder components for routes
 // const HireMe = () => <h2>Hire Me Page</h2>;
@@ -64,6 +69,7 @@ function AppContent() {
           <Route path="/tutorials" element={<Tutorials />} />
           {/* <Route path="/hire" element={<HireMe />} /> */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </div>
@@ -72,6 +78,11 @@ function AppContent() {
 }
 
 function App() {
+  // If maintenance mode is enabled, show WebsiteDown component
+  if (MAINTENANCE_MODE) {
+    return <WebsiteDown />;
+  }
+
   return (
     <Router>
       <AppContent />

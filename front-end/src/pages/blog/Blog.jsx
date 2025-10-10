@@ -11,7 +11,7 @@ const Blog = () => {
         <div className="left-section">
           <div className="image-container">
             <img 
-              src="../../../src/assets/blogs/mainteachingstudents.jpeg" 
+              src="/assets/blogs/mainteachingstudents.jpeg" 
               alt="Recent insights" 
               className="main-image"
             />

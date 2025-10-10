@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import pencilSvg from '../../assets/images/pencil-svgrepo-com.svg';
 import './CustomCursor.css';
 
 export default function CustomCursor() {
+    const pencilSvg = '/assets/images/pencil-svgrepo-com.svg';
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
     const [currentPath, setCurrentPath] = useState('');
     const [isFirstMove, setIsFirstMove] = useState(true);

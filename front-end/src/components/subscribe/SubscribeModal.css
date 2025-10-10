@@ -1,0 +1,249 @@
+.subscribe-modal-overlay {
+  position: fixed;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.subscribe-modal {
+  position: fixed;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-color: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  width: 90%;
+  pointer-events: all;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Large desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .subscribe-modal {
+    max-width: 450px;
+    padding: 28px;
+  }
+}
+
+/* Desktop (1440px - 1919px) */
+@media (min-width: 1440px) and (max-width: 1919px) {
+  .subscribe-modal {
+    max-width: 400px;
+    padding: 24px;
+  }
+}
+
+/* Laptop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .subscribe-modal {
+    max-width: 360px;
+    padding: 22px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .subscribe-modal {
+    max-width: 320px;
+    padding: 20px;
+  }
+}
+
+/* Mobile phones (below 768px) - Horizontal layout */
+@media (max-width: 767px) {
+  .subscribe-modal {
+    max-width: 90vw;
+    width: 90vw;
+    padding: 16px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+
+  .modal-content {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .close-button {
+    top: 8px;
+    right: 8px;
+  }
+
+  .text-content {
+    flex: 1;
+    gap: 8px;
+  }
+
+  .modal-title {
+    font-size: 16px;
+  }
+
+  .modal-description {
+    font-size: 12px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 100px;
+  }
+
+  .subscribe-button {
+    padding: 8px 12px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+
+  .maybe-later-button {
+    font-size: 11px;
+    padding: 4px;
+  }
+}
+
+/* Small phones (below 480px) */
+@media (max-width: 480px) {
+  .subscribe-modal {
+    max-width: 95vw;
+    width: 95vw;
+    padding: 12px;
+  }
+
+  .modal-title {
+    font-size: 14px;
+  }
+
+  .modal-description {
+    font-size: 11px;
+  }
+
+  .subscribe-button {
+    padding: 6px 10px;
+    font-size: 11px;
+  }
+
+  .maybe-later-button {
+    font-size: 10px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #89929b;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  line-height: 1;
+}
+
+.close-button:hover {
+  color: #ffffff;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-title {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.modal-description {
+  color: #89929b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.subscribe-button {
+  background-color: #21262d;
+  border: 1px solid #89929b;
+  border-radius: 6px;
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #89929b;
+  border-color: #c6cdd5;
+}
+
+.maybe-later-button {
+  background: transparent;
+  border: none;
+  color: #89929b;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 8px;
+  transition: color 0.2s ease;
+  text-align: center;
+}
+
+.maybe-later-button:hover {
+  color: #c6cdd5;
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .subscribe-modal {
+    padding: 20px;
+    max-width: calc(100vw - 40px);
+  }
+
+  .modal-title {
+    font-size: 18px;
+  }
+
+  .modal-description {
+    font-size: 13px;
+  }
+}
+

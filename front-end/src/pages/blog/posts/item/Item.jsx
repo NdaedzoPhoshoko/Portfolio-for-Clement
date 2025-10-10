@@ -6,9 +6,9 @@ const Item = ({
   id,
   title = "Thusa, I am a blog post title",
   description = "There is no description provided for this blog post.",
-  image = "../../../src/assets/blogs/mainteachingstudents.jpeg",
+  image = "/assets/blogs/mainteachingstudents.jpeg",
   authorName = "No Author provided",
-  authorAvatar = "/src/assets/images/author-profile.jpg",
+  authorAvatar = "/assets/images/author-profile.jpg",
   date = "No date either"
 }) => {
   const navigate = useNavigate();

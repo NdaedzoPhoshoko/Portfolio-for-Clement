@@ -2,45 +2,26 @@ import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import './Home.css';
-import laptopImage from '../../assets/images/danieljoshualaptop.jpg';
-
-// Import SVG icons
-import assemblyIcon from '../../assets/language_icons/assembly-svgrepo-com.svg';
-import cppIcon from '../../assets/language_icons/cpp3-svgrepo-com.svg';
-import cssIcon from '../../assets/language_icons/css3-svgrepo-com.svg';
-import expressIcon from '../../assets/language_icons/express-svgrepo-com.svg';
-import gitIcon from '../../assets/language_icons/git-svgrepo-com.svg';
-import htmlIcon from '../../assets/language_icons/html5-svgrepo-com.svg';
-import javaIcon from '../../assets/language_icons/java-svgrepo-com.svg';
-import javascriptIcon from '../../assets/language_icons/javascript-logo-svgrepo-com.svg';
-import mysqlIcon from '../../assets/language_icons/mysql-svgrepo-com.svg';
-import nodeIcon from '../../assets/language_icons/node-svgrepo-com.svg';
-import oracleIcon from '../../assets/language_icons/oracle-svgrepo-com.svg';
-import postgresqlIcon from '../../assets/language_icons/postgresql-logo-svgrepo-com.svg';
-import pythonIcon from '../../assets/language_icons/python-svgrepo-com.svg';
-import reactIcon from '../../assets/language_icons/react-svgrepo-com.svg';
-import sqlIcon from '../../assets/language_icons/sql-svgrepo-com.svg';
-import swaggerIcon from '../../assets/language_icons/swagger-svgrepo-com.svg';
-import vscodeIcon from '../../assets/language_icons/vs-code-svgrepo-com.svg';
+import SubscribeModal from '../../components/subscribe/SubscribeModal';
 
 const programmingLanguages = [
-  { name: 'JavaScript', icon: javascriptIcon },
-  { name: 'React', icon: reactIcon },
-  { name: 'SQL', icon: sqlIcon },
-  { name: 'Node.js', icon: nodeIcon },
-  { name: 'Python', icon: pythonIcon },
-  { name: 'HTML', icon: htmlIcon },
-  { name: 'CSS', icon: cssIcon },
-  { name: 'C++', icon: cppIcon },
-  { name: 'Java', icon: javaIcon },
-  { name: 'Swagger', icon: swaggerIcon },
-  { name: 'Express.js', icon: expressIcon },
-  { name: 'PostgreSQL', icon: postgresqlIcon },
-  { name: 'MySQL', icon: mysqlIcon },
-  { name: 'Oracle', icon: oracleIcon },
-  { name: 'Assembly', icon: assemblyIcon },
-  { name: 'Git', icon: gitIcon },
-  { name: 'VS Code', icon: vscodeIcon }
+  { name: 'JavaScript', icon: '/assets/language_icons/javascript-logo-svgrepo-com.svg' },
+  { name: 'React', icon: '/assets/language_icons/react-svgrepo-com.svg' },
+  { name: 'SQL', icon: '/assets/language_icons/sql-svgrepo-com.svg' },
+  { name: 'Node.js', icon: '/assets/language_icons/node-svgrepo-com.svg' },
+  { name: 'Python', icon: '/assets/language_icons/python-svgrepo-com.svg' },
+  { name: 'HTML', icon: '/assets/language_icons/html5-svgrepo-com.svg' },
+  { name: 'CSS', icon: '/assets/language_icons/css3-svgrepo-com.svg' },
+  { name: 'C++', icon: '/assets/language_icons/cpp3-svgrepo-com.svg' },
+  { name: 'Java', icon: '/assets/language_icons/java-svgrepo-com.svg' },
+  { name: 'Swagger', icon: '/assets/language_icons/swagger-svgrepo-com.svg' },
+  { name: 'Express.js', icon: '/assets/language_icons/express-svgrepo-com.svg' },
+  { name: 'PostgreSQL', icon: '/assets/language_icons/postgresql-logo-svgrepo-com.svg' },
+  { name: 'MySQL', icon: '/assets/language_icons/mysql-svgrepo-com.svg' },
+  { name: 'Oracle', icon: '/assets/language_icons/oracle-svgrepo-com.svg' },
+  { name: 'Assembly', icon: '/assets/language_icons/assembly-svgrepo-com.svg' },
+  { name: 'Git', icon: '/assets/language_icons/git-svgrepo-com.svg' },
+  { name: 'VS Code', icon: '/assets/language_icons/vs-code-svgrepo-com.svg' }
 ];
 
 const Home = () => {
@@ -53,6 +34,7 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <SubscribeModal />
       <div className="top-container">
         <div className="top-left-container">
           {/* Default greeting for larger screens */}
@@ -74,7 +56,7 @@ const Home = () => {
         </div>
         <div className="top-right-container">
           <img 
-            src="/src/assets/images/reactJscode.png" 
+            src="/assets/images/reactJscode.png" 
             alt="ReactJS script preview image" 
             className="script-preview-image"
           />
