@@ -17,7 +17,7 @@ import Tutorials from "./pages/blog/tutorials/Tutorials";
 import Contact from "./pages/contact/Contact";
 
 // Placeholder components for routes
-const HireMe = () => <h2>Hire Me Page</h2>;
+// const HireMe = () => <h2>Hire Me Page</h2>;
 
 // Component to handle page transitions
 function AppContent() {
@@ -62,7 +62,7 @@ function AppContent() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/view/:id" element={<ViewItem />} />
           <Route path="/tutorials" element={<Tutorials />} />
-          <Route path="/hire" element={<HireMe />} />
+          {/* <Route path="/hire" element={<HireMe />} /> */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
