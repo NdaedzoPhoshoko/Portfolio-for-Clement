@@ -23,7 +23,7 @@ const WebsiteDown = () => {
           <h1 className="websitedown-title">We'll Be Right Back</h1>
           <h2 className="websitedown-subtitle">Website Temporarily Down</h2>
           <p className="websitedown-description">
-            We're currently performing some maintenance. Please check back in a few moments.
+            Clement is currently performing some maintenance. Please check back in a few moments.
           </p>
         </div>
 
