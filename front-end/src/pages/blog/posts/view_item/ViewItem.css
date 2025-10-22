@@ -374,3 +374,59 @@
     height: 40px;
   }
 }
+
+/* Entrance Animations */
+.view-item-container.enter-init {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.view-item-container.enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 400ms ease, transform 400ms ease;
+}
+
+.enter-child {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.view-item-container.enter-active .enter-child {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+/* Stagger delays */
+.enter-delay-1 { transition-delay: 100ms; }
+.enter-delay-2 { transition-delay: 200ms; }
+.enter-delay-3 { transition-delay: 300ms; }
+
+/* Image and avatar soft entrance */
+.view-item-container.enter-active .hero-image {
+  animation: imageIn 500ms ease 150ms both;
+}
+@keyframes imageIn {
+  0% { opacity: 0; transform: scale(0.98); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.view-item-container.enter-active .author-avatar {
+  animation: avatarIn 400ms ease 250ms both;
+}
+@keyframes avatarIn {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .view-item-container.enter-active,
+  .view-item-container.enter-init,
+  .enter-child,
+  .view-item-container.enter-active .enter-child {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}

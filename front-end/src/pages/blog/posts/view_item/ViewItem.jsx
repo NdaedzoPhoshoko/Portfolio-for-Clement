@@ -8,6 +8,7 @@ const ViewItem = () => {
   const navigate = useNavigate();
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [hasEntered, setHasEntered] = useState(false);
 
   // Minimal Markdown to HTML converter for headings, lists, bold/italic, inline code, links, and paragraphs
   const convertMarkdownToHtml = (markdown) => {
@@ -101,6 +102,16 @@ const ViewItem = () => {
     return () => clearTimeout(timer);
   }, [id]);
 
+  // Trigger entrance animation when content becomes available
+  useEffect(() => {
+    if (!loading) {
+      const t = setTimeout(() => setHasEntered(true), 80);
+      return () => clearTimeout(t);
+    } else {
+      setHasEntered(false);
+    }
+  }, [loading]);
+
   // Update document title when post data is loaded
   useEffect(() => {
     if (post && post.title) {
@@ -125,7 +136,7 @@ const ViewItem = () => {
 
   if (!post) {
     return (
-      <div className="view-item-container">
+      <div className="view-item-container enter-active">
         <div className="not-found-container">
           <h1>Post Not Found</h1>
           <p>The blog post you're looking for doesn't exist.</p>
@@ -138,9 +149,9 @@ const ViewItem = () => {
   }
 
   return (
-    <div className="view-item-container">
+    <div className={`view-item-container ${hasEntered ? 'enter-active' : 'enter-init'}`}>
       {/* Back Button */}
-      <div className="back-button-container">
+      <div className="back-button-container enter-child enter-delay-1">
         <button onClick={handleBackClick} className="back-button">
           <span className="back-arrow">←</span>
           <span className="back-text">Back to Blog</span>
@@ -148,7 +159,7 @@ const ViewItem = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="view-item-hero">
+      <div className="view-item-hero enter-child enter-delay-2">
         <div className="hero-image-container">
           <img 
             src={post.image} 
@@ -185,7 +196,7 @@ const ViewItem = () => {
       </div>
 
       {/* Content Section */}
-      <div className="view-item-content">
+      <div className="view-item-content enter-child enter-delay-3">
         <div className="content-wrapper">
           <div className="post-content" dangerouslySetInnerHTML={{ __html: convertMarkdownToHtml(post.content) }} />
         </div>

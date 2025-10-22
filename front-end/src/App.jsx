@@ -4,7 +4,7 @@ import Footer from "./components/footer/Footer";
 import NotFound from "./components/notFound/NotFound";
 import WebsiteDown from "./components/websiteDown/WebsiteDown";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 
 import Home from "./pages/home/Home";
 import Journey from "./pages/about/journey/Journey";
@@ -13,7 +13,7 @@ import Achievements from "./pages/about/achievement/Achievements";
 
 import Blog from "./pages/blog/Blog";
 // import Item from "./pages/blog/posts/item/Item";
-import ViewItem from "./pages/blog/posts/view_item/ViewItem";
+const ViewItem = lazy(() => import("./pages/blog/posts/view_item/ViewItem"));
 import Tutorials from "./pages/blog/tutorials/Tutorials";
 
 import Contact from "./pages/contact/Contact";
@@ -84,7 +84,7 @@ function AppContent() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/achievements" element={<Achievements />} />
           <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/view/:id" element={<ViewItem />} />
+          <Route path="/blog/view/:id" element={<Suspense fallback={<div className="view-item-container"><div className="loading-container"><div className="loading-spinner"></div><p>Loading post...</p></div></div>}><ViewItem /></Suspense>} />
           <Route path="/tutorials" element={<Tutorials />} />
           {/* <Route path="/hire" element={<HireMe />} /> */}
           <Route path="/contact" element={<Contact />} />
