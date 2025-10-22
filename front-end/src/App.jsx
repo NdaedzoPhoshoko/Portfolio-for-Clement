@@ -52,6 +52,25 @@ function AppContent() {
     return () => clearTimeout(timer);
   }, [location.pathname]);
 
+  // Set per-route document titles
+  useEffect(() => {
+    const baseTitle = "Ndaedzo Clement Phoshoko";
+    const titleByPath = {
+      "/": `Home | ${baseTitle}`,
+      "/journey": `Journey | ${baseTitle}`,
+      "/resume": `Resume | ${baseTitle}`,
+      "/achievements": `Achievements | ${baseTitle}`,
+      "/blog": `Blog | ${baseTitle}`,
+      "/tutorials": `Tutorials | ${baseTitle}`,
+      "/contact": `Contact | ${baseTitle}`,
+    };
+    let nextTitle = titleByPath[location.pathname] || baseTitle;
+    if (location.pathname.startsWith("/blog/view/")) {
+      nextTitle = `Blog Post | ${baseTitle}`;
+    }
+    document.title = nextTitle;
+  }, [location.pathname]);
+
   return (
     <>
       <Navbar />

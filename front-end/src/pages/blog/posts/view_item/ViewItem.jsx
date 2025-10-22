@@ -101,6 +101,13 @@ const ViewItem = () => {
     return () => clearTimeout(timer);
   }, [id]);
 
+  // Update document title when post data is loaded
+  useEffect(() => {
+    if (post && post.title) {
+      document.title = `${post.title} | Ndaedzo Clement Phoshoko`;
+    }
+  }, [post]);
+
   const handleBackClick = () => {
     navigate('/blog');
   };

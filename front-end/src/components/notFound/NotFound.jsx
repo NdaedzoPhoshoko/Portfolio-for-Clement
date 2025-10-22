@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import './NotFound.css';
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = 'Page Not Found | Ndaedzo Clement Phoshoko';
+  }, []);
   const navigate = useNavigate();
 
   const handleGoHome = () => {

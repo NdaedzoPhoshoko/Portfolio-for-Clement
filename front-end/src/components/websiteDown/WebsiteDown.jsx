@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotateRight } from '@fortawesome/free-solid-svg-icons';
 import './WebsiteDown.css';
 
 const WebsiteDown = () => {
+  useEffect(() => {
+    document.title = 'Website Maintenance | Ndaedzo Clement Phoshoko';
+  }, []);
   const handleReload = () => {
     window.location.reload();
   };
