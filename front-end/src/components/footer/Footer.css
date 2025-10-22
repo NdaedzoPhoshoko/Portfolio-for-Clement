@@ -14,7 +14,7 @@
   color: #ffffff;
   font-family: Arial, sans-serif;
   position: relative;
-  z-index: 1000; /* Ensure footer stays above other content */
+  z-index: 60; /* Lower than navbar (1000), higher than home ticker (50) */
   
   /* Performance optimizations */
   contain: layout style paint;
@@ -87,14 +87,14 @@
   gap: 1rem;
 }
 
-.social-link {
+.footer .social-link {
   color: #ffffff;
   font-size: 1.2rem;
   text-decoration: none;
   transition: opacity 0.3s ease;
 }
 
-.social-link:hover {
+.footer .social-link:hover {
   opacity: 0.7;
 }
 
@@ -349,7 +349,7 @@
     gap: 1.15rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 1.05rem;
   }
   
@@ -425,12 +425,12 @@
   }
   
   .footer-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr; /* Keep two columns on small screens */
     gap: 1rem;
   }
   
   .company-info {
-    grid-column: span 1;
+    grid-column: span 2; /* Company info spans both columns */
     text-align: center;
     gap: 1rem;
   }
@@ -462,12 +462,12 @@
     gap: 1.2rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 1.1rem;
   }
   
   .newsletter {
-    grid-column: span 1;
+    grid-column: span 2; /* Newsletter spans both columns */
   }
   
   .newsletter-form {
@@ -567,7 +567,7 @@
     gap: 1.1rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 1rem;
   }
   
@@ -668,7 +668,7 @@
     gap: 0.8rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 0.85rem;
   }
   
@@ -759,7 +759,7 @@
     gap: 1rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 0.95rem;
   }
   
@@ -850,7 +850,7 @@
     gap: 1.1rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 1rem;
   }
   
@@ -941,7 +941,7 @@
     gap: 1.15rem;
   }
   
-  .social-link {
+  .footer .social-link {
     font-size: 1.05rem;
   }
   
@@ -1289,10 +1289,10 @@
    ======================================== */
 
 /* GPU acceleration for smooth interactions */
-.social-link,
-.newsletter-button,
-.footer-link,
-.legal-link {
+.footer .social-link,
+.footer .newsletter-button,
+.footer .footer-link,
+.footer .legal-link {
   transform: translateZ(0);
   backface-visibility: hidden;
   will-change: transform;
@@ -1305,17 +1305,17 @@
   }
   
   /* Reduce will-change usage on mobile for better performance */
-  .social-link,
-  .newsletter-button,
-  .footer-link,
-  .legal-link {
+  .footer .social-link,
+  .footer .newsletter-button,
+  .footer .footer-link,
+  .footer .legal-link {
     will-change: auto;
   }
   
-  .social-link:hover,
-  .newsletter-button:hover,
-  .footer-link:hover,
-  .legal-link:hover {
+  .footer .social-link:hover,
+  .footer .newsletter-button:hover,
+  .footer .footer-link:hover,
+  .footer .legal-link:hover {
     will-change: transform;
   }
 }
@@ -1339,10 +1339,10 @@
 
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
-  .social-link,
-  .newsletter-button,
-  .footer-link,
-  .legal-link {
+  .footer .social-link,
+  .footer .newsletter-button,
+  .footer .footer-link,
+  .footer .legal-link {
     transition: none;
     transform: none;
     will-change: auto;
@@ -1364,7 +1364,7 @@
     box-shadow: none !important;
   }
   
-  .social-link,
+  .footer .social-link,
   .newsletter-form {
     display: none !important;
   }
@@ -1372,5 +1372,35 @@
   .footer-link {
     color: black !important;
     text-decoration: underline !important;
+  }
+}
+
+/* Scope potentially conflicting link styles to footer only */
+.footer .social-link {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+.footer .social-link:hover {
+  opacity: 0.7;
+}
+
+/* Ensure footer content stays in two columns on small screens */
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .company-info {
+    grid-column: span 2;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .newsletter {
+    grid-column: span 2;
   }
 }
